@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet"
+  type="text/css href="LoginPageStyle.css">
+
+  <title> Login Page </title>
+
+</head>
+
+<body>
+
+  <h1>Login to your account</h1>
+
+  <form>
+
+    <label for="username">Username:</label>
+
+    <input id="username" name="username" type="text"
+    required minlength="3" maxlength="15"
+    Pattern="[a-zA-Z0-9]+">
+
+    <p>       </p>
+
+    <label for="pw">Password:</label>
+
+    <input id="pw" name="pw" type="password" required
+    minlength="8" maxlength="20">
+
+    <br>
+
+    <p>         </p>
+
+    <input type="submit" value="Log In">
+
+  </form>
+
+  <br>
+
+  <input id="rememberme" type="checkbox"
+    name="rememberme" checked="true" value="forever"
+    title="rememberme">
+
+    <label for="rememberme">Keep Me Signed In</label>
+
+    <p>         </p>
+
+    <a href=<!--Add Forgot Password link here-->
+      Forgot Password?</a>
+
+
+  <br>
+
+  <p>Don't have an account?<a href=<!--Add Register link here--> Register
+  </a></p>
+
+  </body>
+
+</html>
