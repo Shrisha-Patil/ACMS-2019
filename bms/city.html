@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/city.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column active">
+        <div class="content">
+          <h1>1</h1>
+          <div class="box">
+            <h2>bengaluru</h2>
+            <p>hi how you doin</p>
+          </div>
+        </div>
+        <div class="bg bg1">
+
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <h1>2</h1>
+          <div class="box">
+            <h2>bengaluru</h2>
+            <p>hi how you doin</p>
+          </div>
+        </div>
+        <div class="bg bg2">
+
+        </div>
+      </div>
+
+
+      <div class="column">
+        <div class="content">
+          <h1>3</h1>
+          <div class="box">
+            <h2>bengaluru</h2>
+            <p>hi how you doin</p>
+          </div>
+        </div>
+        <div class="bg bg3">
+        </div>
+      </div>
+
+
+      <div class="column">
+        <div class="content">
+          <h1>4</h1>
+          <div class="box">
+            <h2>bengaluru</h2>
+            <p>hi how you doin</p>
+          </div>
+        </div>
+        <div class="bg bg4">
+
+        </div>
+      </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+      $(document).on('mouseover','.container .column' ,function(){
+        $(this).addClass('active').siblings().removeClass('active')
+      })
+    </script>
+
+
+  </body>
+</html>
