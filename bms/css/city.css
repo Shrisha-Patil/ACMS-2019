@@ -14,7 +14,7 @@ body{
     height: 350px;
     float: left;
 
-    border-right: 2px solid rgba(0, 0, 0, 0.5);
+
     z-index: 1;
   }
 .container .column: last-child{
@@ -37,39 +37,17 @@ body{
   margin: 0;
   padding: 0;
   color: rgba(255, 255, 0, 0.5);
-  font-size: 15em;
-  border-top: 2px solid rgba(0, 0, 0, 0.5);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  font-size: 5em;
+
 }
 
-.container .column .content .box{
-  position: relative;
-  top: 50%;
-  transform: translateY(100%);
-  box-sizing: border-box;
-  padding: 40px;
-  background: rgba(255, 0, 0, 0.5);
-  text-align: center;
-  transition: 0.5s;
-  opacity:0;
-}
+
 
 .container .column.active .content .box{
-    opacity:1;
+    opacity:0;
     transform: translate(-50%);
 }
-.container .column .content .box h2{
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-  color: blue;
-}
 
-.container .column .content .box p{
-  color: red;
-  font-size: 18px;
-
-}
 .container .column .bg
 {
   position: absolute;
