@@ -20,7 +20,7 @@ body{
       height: 100%;
       width: 90%;
       overflow: hidden;
-      justify-content: center;
+
 
     }
     .container .column{
@@ -33,7 +33,9 @@ body{
     .container .column .content{
       position:relative;
       height: 100%;
-      justify-content: center;
+      left:250px;
+      padding-left: 40px;
+      padding-right: 40px;
 
     }
     .container .column .content p{
