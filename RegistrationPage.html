@@ -16,7 +16,18 @@
 
   <body>
 
-    <h1 style="text-align:center;">Register for an Account</h1>
+    <div id="loading"></div
+
+    function hideLoader() {
+    $('#loading').hide();
+}
+
+$(window).ready(hideLoader);
+
+setTimeout(hideLoader, 20 * 1000);
+
+
+    <h1> style="text-align:center;">Register for an Account</h1>
 
     <div class="signup-w3ls">
 
@@ -90,7 +101,7 @@
                        <option value="Manager">Manager</option>
                        <option value="Both">Both</option>
                    </select>
-                  </div>
+                  </div>                
 
 
 <br>

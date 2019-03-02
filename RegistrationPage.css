@@ -1,3 +1,13 @@
+#loading {
+    background: url('popcorn.gif') no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+}
+
 .signup-w3ls {
   width: 50%;
   margin: 70px 25% 80%;
@@ -25,7 +35,7 @@ label.header {
   display: inline-block;
   font-family: 'Nunito', sans-serif;
 }
-input#image,input#store_name, input#store_type,input#owner_type, input#website,input#contact_number,input#contact_email {
+input#image,input#name, input#email,input#phone_number, input#password,input#confirm_password,input#gender,input#type_of_user {
   padding:0 40px;
   width:40%;
   height:55px;
@@ -43,7 +53,7 @@ input#image,input#store_name, input#store_type,input#owner_type, input#website,i
   -o-border-radius:30px;
   -ms-border-radius:30px;
 }
-input#image:focus,input#store_name:focus, input#store_type:focus,input#owner_type:focus, input#website:focus,input#contact_number:focus,input#contact_email:focus  {
+input#name:focus,input#email:focus, input#phone_number:focus,input#password:focus, input#confirm_password:focus,input#gender:focus,input#type_of_user:focus,input#image:focus  {
   background-color:#f5f8fa !important;
   border:1px solid #dadada;
 }
