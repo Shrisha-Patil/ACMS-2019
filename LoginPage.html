@@ -6,13 +6,25 @@
   <meta charset="utf-8">
 
   <link rel="stylesheet"
-  type="text/css" href="LoginPageStyle.css">
+  type="text/css" href="LoginPage.css">
 
   <title> Login Page </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+         jQuery(window).load(function(){
+             jQuery(".popcorn-loader-overlay").fadeOut(1000);
+         });
+     </script>
+
+  <noscript>
+    <style>.popcorn-loader-overlay { display: none; } </style> </noscript>
+
 
 </head>
 
 <body>
+
+  <div class="popcorn-loader-overlay"></div>
 
   <h1>Login to your account</h1>
 
