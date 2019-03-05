@@ -9,25 +9,24 @@
 
   <title>Registration Page</title>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+         jQuery(window).load(function(){
+             jQuery(".popcorn-loader-overlay").fadeOut(1000);
+         });
+     </script>
 
+  <noscript>
+    <style>.popcorn-loader-overlay { display: none; } </style> </noscript>
 
   </head>
 
   <body>
-
-    <div id="loading"></div
-
-    function hideLoader() {
-    $('#loading').hide();
-}
-
-$(window).ready(hideLoader);
-
-setTimeout(hideLoader, 20 * 1000);
+    
+     <div class="popcorn-loader-overlay"></div>
 
 
-    <h1> style="text-align:center;">Register for an Account</h1>
+  <h1 style="text-align:center;">Register for an Account
 
     <div class="signup-w3ls">
 
@@ -101,7 +100,7 @@ setTimeout(hideLoader, 20 * 1000);
                        <option value="Manager">Manager</option>
                        <option value="Both">Both</option>
                    </select>
-                  </div>                
+                  </div>
 
 
 <br>
