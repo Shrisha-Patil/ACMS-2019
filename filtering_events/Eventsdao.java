@@ -28,9 +28,9 @@ public class Eventsdao {
 	        }    
 	    });    
 	} 
-	public List<Events> getEventByGenre(String genre){    
-		String sql="select event_id,name,genre,date,poster from event where genre=?";    
-	    return template.query(sql, new Object[]{genre},new RowMapper<Events>(){
+	public List<Events> getEventByGenre(String category,String genre){    
+		String sql="select event_id,name,genre,date,poster from event where category=? and genre=?";    
+	    return template.query(sql, new Object[]{category,genre},new RowMapper<Events>(){
 	    	public Events mapRow(ResultSet rs, int row) throws SQLException {    
 	            Events eve=new Events();    
 	            eve.setEvent_id(rs.getInt("event_id"));
