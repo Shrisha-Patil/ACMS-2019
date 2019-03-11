@@ -18,7 +18,7 @@ pageEncoding="ISO-8859-1"%>
 			<a href="sortcat/${category='movie'}">Sort by category</a>
 		</h3>
 		<h3>
-			<a href="sortgenre/${genre='thriller'}">Sort by genre</a>
+			<a href="sortgenre/${category='movie'}/${genre='thriller'}">Sort by genre</a>
 		</h3>
 	</center>
 </body>
