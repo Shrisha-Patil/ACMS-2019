@@ -27,9 +27,9 @@ public class Evcontroller {
 	        m.addAttribute("listc",listc);  
 	        return "sortcat";    
 	    }
-	 @RequestMapping(value="/sortgenre/{genre}")    
-	    public String sortgen(@PathVariable String genre, Model m){    
-		 List<Events> listg=dao.getEventByGenre(genre);    
+	 @RequestMapping(value="/sortgenre/{category}/{genre}")    
+	    public String sortgen(@PathVariable("category") String category,@PathVariable("genre")String genre, Model m){    
+		 List<Events> listg=dao.getEventByGenre(category,genre);    
 	        m.addAttribute("listg",listg);  
 	        return "sortgenre";    
 	    }
