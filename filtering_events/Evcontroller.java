@@ -33,6 +33,10 @@ public class Evcontroller {
 	        m.addAttribute("listg",listg);  
 	        return "sortgenre";    
 	    }
-
-
+	@RequestMapping(value="/sortcities/{city}")    
+	    public String sortcity(@PathVariable String city, Model m){    
+		 List<Events> listci=dao.getEventByCity(city);    
+	        m.addAttribute("listci",listci);  
+	        return "sortcities";    
+	    }
 }
