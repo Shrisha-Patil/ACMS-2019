@@ -28,6 +28,21 @@ public class Eventsdao {
 	        }    
 	    });    
 	} 
+	public List<Events> getEventByCity(String city){    
+		String sql="select e.event_id,name,genre,date,poster from event e,venue v where v.event_id=e.event_id and v.city=?";    
+	    return template.query(sql, new Object[]{city},new RowMapper<Events>(){
+	    	public Events mapRow(ResultSet rs, int row) throws SQLException {    
+	            Events ci=new Events();    
+	            ci.setEvent_id(rs.getInt("event_id"));
+				ci.setName(rs.getString("name"));
+				ci.setGenre(rs.getString("genre"));
+				ci.setDate(rs.getDate("date"));
+				ci.setPoster(rs.getString("poster"));
+
+				return ci;  
+	        }    
+	    });    
+	}
 	public List<Events> getEventByGenre(String category,String genre){    
 		String sql="select event_id,name,genre,date,poster from event where category=? and genre=?";    
 	    return template.query(sql, new Object[]{category,genre},new RowMapper<Events>(){
