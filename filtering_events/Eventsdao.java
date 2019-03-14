@@ -43,6 +43,21 @@ public class Eventsdao {
 	        }    
 	    });    
 	}
+	public List<Events> getEventTrending(String category){    
+		String sql=" select e.event_id,e.name,e.genre,e.cost,e.date,e.time,e.poster,max(rating) as rating from event e,review r where e.event_id=r.event_id and e.category=? group by name having max(rating)>8";    
+	    return template.query(sql, new Object[]{category},new RowMapper<Events>(){
+	    	public Events mapRow(ResultSet rs, int row) throws SQLException {    
+	            Events tr=new Events();    
+	            tr.setEvent_id(rs.getInt("event_id"));
+				tr.setName(rs.getString("name"));
+				tr.setGenre(rs.getString("genre"));
+				tr.setDate(rs.getDate("date"));
+				tr.setPoster(rs.getString("poster"));
+                tr.setRating(rs.getInt("rating"));
+				return tr;  
+	        }    
+	    });    
+	} 
 	public List<Events> getEventByGenre(String category,String genre){    
 		String sql="select event_id,name,genre,date,poster from event where category=? and genre=?";    
 	    return template.query(sql, new Object[]{category,genre},new RowMapper<Events>(){
