@@ -33,6 +33,12 @@ public class Evcontroller {
 	        m.addAttribute("listg",listg);  
 	        return "sortgenre";    
 	    }
+	@RequestMapping(value="/trending/{category}")    
+	    public String trend(@PathVariable String category, Model m){    
+		 List<Events> listcate=dao.getEventTrending(category);    
+	        m.addAttribute("listcate",listcate);  
+	        return "trending";    
+	    }
 	@RequestMapping(value="/sortcities/{city}")    
 	    public String sortcity(@PathVariable String city, Model m){    
 		 List<Events> listci=dao.getEventByCity(city);    
