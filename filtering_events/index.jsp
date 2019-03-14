@@ -23,6 +23,9 @@ pageEncoding="ISO-8859-1"%>
 		<h3>
 			<a href="sortcities/${city='bangalore'}">Sort by city</a>
 		</h3>
+		<h3>
+			<a href="trending/${category='movie'}">Trending Events</a>
+		</h3>
 	</center>
 </body>
 </html>
