@@ -13,4 +13,5 @@ public class Events {
 	private String poster;
 	private String category;
 	private String city;
+	private int rating;
 }
