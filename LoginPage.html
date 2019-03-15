@@ -33,28 +33,28 @@
     <label for="username">Username:</label>
 
     <input id="username" name="username" type="text"
-     pattern="[a-zA-Z0-9]+">
+     pattern="[a-zA-Z0-9]+" title="Username" method=post>
 
     <p>       </p>
 
     <label for="pw">Password:</label>
 
     <input id="pw" name="pw" type="password" required
-    minlength="8" maxlength="20">
+    minlength="8" maxlength="20" title="Password" method=post>
 
     <br>
 
     <p>         </p>
 
-    <input type="submit" value="Log In">
+    <input type="submit" title="Log In" value="Log In">
 
   </form>
 
   <br>
 
   <input id="rememberme" type="checkbox"
-    name="rememberme" checked="true" value="forever"
-    title="rememberme">
+    name="rememberme"
+    title="Keep Me Signed In">
 
     <label for="rememberme">Keep Me Signed In</label>
 
@@ -66,7 +66,7 @@
 
   <br>
 
-  <p>Don't have an account?<a href=<!--Add Register link here--> Register
+  <p>Don't have an account?<a href=RegistrationPage.html title="Register Here"> Register Here
   </a></p>
 
   </body>

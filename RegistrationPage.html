@@ -36,30 +36,30 @@
 
           <div class="form-control">
               <label class="header">Name(*):</label>
-              <input type="text" id="name" name="name" placeholder="Name"
-               required>
+              <input type="text" title="Name" id="name" name="name" placeholder="Name"
+               required method=post>
           </div>
 
           <div class="form-control">
               <label class="header">Phone Number(*):</label>
-              <input type="tel" id="phone_number" name="phone_number"
-              placeholder="Phone Number" title="Please enter your Phone Number" required>
+              <input type="tel" title="Phone Number" id="phone_number" name="phone_number"
+              placeholder="Phone Number" method=post title="Please enter your Phone Number" required>
           </div>
 
           <div class="form-control">
               <label class="header">Email(*):</label>
-              <input type="email" id="email" name="email" placeholder="Email" required>
+              <input type="email" title="Email" id="email" method =post name="email" placeholder="Email" required>
           </div>
 
         <div class="form-control">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <label class="header">Password(*):</label>
-          <input name="password" id="password" type="password" placeholder="Password" required>
+          <input name="password" title="Password" method=post id="password" type="password" placeholder="Password" required>
       </div>
 
       <div class="form-control">
         <label class="header">Confirm Password(*):</label>
-          <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required />
+          <input type="password" title="Confirm Password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required />
           <span id='message'></span>
         </div
 
@@ -75,14 +75,14 @@
           <div class="form-control">
                 <label class="header">Profile Photo(optional):</label>
 
-                <input id="image" type="file" name="profile_photo" placeholder="Photo" capture>
+                <input id="image" title="Profile Photo" type="file" name="profile_photo" placeholder="Photo" method=post capture>
             </div>
 
 
 <br>
 
             <div class="form-control">
-                <label class="header">Gender(*):</label><select name="gender" required>
+                <label class="header" title="Gender">Gender(*):</label><select name="gender" method=post required>
                     <option value=" " selected> EMPTY </option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -94,7 +94,7 @@
 
 
                <div class="form-control">
-                   <label class="header">Type of User(*)</label><select name="type_of_user" required>
+                   <label class="header" title="Type of User">Type of User(*)</label><select name="type_of_user" method=post required>
                        <option value=" " selected> EMPTY </option>
                        <option value="Customer">Customer</option>
                        <option value="Manager">Manager</option>
@@ -105,7 +105,7 @@
 
 <br>
             <div>
-              <input style="text-align: center;" type="submit" class="register" value="Register">
+              <input style="text-align: center;" type="submit" class="register" title="Submit" method=post value="Register">
               </div>
 
 
