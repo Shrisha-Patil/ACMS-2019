@@ -37,52 +37,54 @@
           <div class="form-control">
               <label class="header">Name(*):</label>
               <input type="text" title="Name" id="name" name="name" placeholder="Name"
-               required method=post>
+               required method="post">
           </div>
 
           <div class="form-control">
               <label class="header">Phone Number(*):</label>
               <input type="tel" title="Phone Number" id="phone_number" name="phone_number"
-              placeholder="Phone Number" method=post title="Please enter your Phone Number" required>
+              placeholder="Phone Number" method="post" title="Please enter your Phone Number" required>
           </div>
 
           <div class="form-control">
               <label class="header">Email(*):</label>
-              <input type="email" title="Email" id="email" method =post name="email" placeholder="Email" required>
+              <input type="email" title="Email" id="email" method ="post" name="email" placeholder="Email" required>
           </div>
 
         <div class="form-control">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            <label class="header">Password(*):</label>
-          <input name="password" title="Password" method=post id="password" type="password" placeholder="Password" required>
+            <label class="header" name="password" id="password" type="password" title="password" method="post" placeholder="Password" required>Password(*):</label>
+            <input type="password" id="password" title="Password" name="password" placeholder="Password" required/>
       </div>
+      <br>
 
       <div class="form-control">
         <label class="header">Confirm Password(*):</label>
-          <input type="password" title="Confirm Password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required />
+          <input type="password" title="Confirm Password" name="confirm_password" id="confirm_password" method="post" placeholder="Confirm Password" required />
           <span id='message'></span>
         </div
 
-        $('#password, #confirm_password').on('keyup', function () {
-  if ($('#password').val() == $('#confirm_password').val()) {
-    $('#message').html('Matching').css('color', 'green');
-  } else
-    $('#message').html('Not Matching').css('color', 'red');
-});
-
+        function check() {
+            if(document.getElementById('password').value ===
+                    document.getElementById('confirm_password').value) {
+                document.getElementById('message').innerHTML = "match";
+            } else {
+                document.getElementById('message').innerHTML = "no match";
+            }
+        }
 
 
           <div class="form-control">
                 <label class="header">Profile Photo(optional):</label>
 
-                <input id="image" title="Profile Photo" type="file" name="profile_photo" placeholder="Photo" method=post capture>
+                <input id="image" title="Profile Photo" type="file" name="profile_photo" placeholder="Photo" method="post" capture>
             </div>
 
 
 <br>
 
             <div class="form-control">
-                <label class="header" title="Gender">Gender(*):</label><select name="gender" method=post required>
+                <label class="header" title="Gender">Gender(*):</label><select name="gender" method="post" required>
                     <option value=" " selected> EMPTY </option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -94,7 +96,7 @@
 
 
                <div class="form-control">
-                   <label class="header" title="Type of User">Type of User(*)</label><select name="type_of_user" method=post required>
+                   <label class="header" title="Type of User">Type of User(*)</label><select name="type_of_user" method="post" required>
                        <option value=" " selected> EMPTY </option>
                        <option value="Customer">Customer</option>
                        <option value="Manager">Manager</option>
@@ -105,7 +107,7 @@
 
 <br>
             <div>
-              <input style="text-align: center;" type="submit" class="register" title="Submit" method=post value="Register">
+              <input style="text-align: center;" type="submit" class="register" title="Submit" method="post" value="Register">
               </div>
 
 
