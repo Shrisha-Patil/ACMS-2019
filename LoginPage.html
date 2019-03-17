@@ -11,48 +11,48 @@
   <title> Login Page </title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>
-         jQuery(window).load(function(){
-             jQuery(".popcorn-loader-overlay").fadeOut(1000);
-         });
-     </script>
-
+  jQuery(window).load(function(){
+    jQuery(".popcorn-loader-overlay").fadeOut(1000);
+  });
+  </script>
+  
   <noscript>
     <style>.popcorn-loader-overlay { display: none; } </style> </noscript>
 
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-  <div class="popcorn-loader-overlay"></div>
+    <div class="popcorn-loader-overlay"></div>
 
-  <h1>Login to your account</h1>
+    <h1>Login to your account</h1>
 
-  <form method="post">
+    <form method="post">
 
-    <label for="username">Username:</label>
+      <label for="username">Username:</label>
 
-    <input id="username" name="username" type="text"
-     pattern="[a-zA-Z0-9]+" title="Username" method="post">
+      <input id="username" name="username" type="text"
+      pattern="[a-zA-Z0-9]+" title="Username" method="post">
 
-    <p>       </p>
+      <p>       </p>
 
-    <label for="pw">Password:</label>
+      <label for="pw">Password:</label>
 
-    <input id="pw" name="pw" type="password" required
-    minlength="8" maxlength="20" title="Password" method="post">
+      <input id="pw" name="pw" type="password" required
+      minlength="8" maxlength="20" title="Password" method="post">
+
+      <br>
+
+      <p>         </p>
+
+      <input type="submit" title="Log In" value="Log In">
+
+    </form>
 
     <br>
 
-    <p>         </p>
-
-    <input type="submit" title="Log In" value="Log In">
-
-  </form>
-
-  <br>
-
-  <input id="rememberme" type="checkbox"
+    <input id="rememberme" type="checkbox"
     name="rememberme"
     title="Keep Me Signed In">
 
@@ -64,11 +64,11 @@
       Forgot Password?</a>
 
 
-  <br>
+      <br>
 
-  <p>Don't have an account?<a href="RegistrationPage.html" title="Register Here"> Register Here
-  </a></p>
+      <p>Don't have an account?<a href="RegistrationPage.html" title="Register Here"> Register Here
+      </a></p>
 
-  </body>
+    </body>
 
-</html>
+    </html>
