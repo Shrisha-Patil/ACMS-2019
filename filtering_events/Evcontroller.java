@@ -21,21 +21,21 @@ public class Evcontroller {
 	        m.addAttribute("list",list);  
 	        return "showpage";    
 	    }
-	 @RequestMapping(value="/sortcat/{category}")    
+	 @GetMapping(value="/sortcat/{category}")    
 	    public String sortcatg(@PathVariable String category, Model m){    
 		 List<Events> listc=dao.getEventByCategory(category);    
 	        m.addAttribute("listc",listc);  
 	        return "sortcat";    
 	    }
-	 @RequestMapping(value="/sortgenre/{category}/{genre}")    
+	 @GetMapping(value="/sortgenre/{category}/{genre}")    
 	    public String sortgen(@PathVariable("category") String category,@PathVariable("genre")String genre, Model m){    
 		 List<Events> listg=dao.getEventByGenre(category,genre);    
 	        m.addAttribute("listg",listg);  
 	        return "sortgenre";    
 	    }
-	@RequestMapping(value="/trending")    
-	    public String trend(@PathVariable String category, Model m){    
-		 List<Events> listcate=dao.getEventTrending(category);    
+	@GetMapping(value="/trending")    
+	    public String trend(Model m){    
+		 List<Events> listcate=dao.getEventTrending();    
 	        m.addAttribute("listcate",listcate);  
 	        return "trending";    
 	    }
