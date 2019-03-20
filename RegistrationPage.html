@@ -64,48 +64,69 @@
           <div class="form-control">
             <label class="header">Confirm Password(*):</label>
             <input type="password" title="Confirm Password" name="confirm_password" id="confirm_password" method="post" placeholder="Confirm Password" required />
-            <span id='message'></span>
+
           </div>
 
-          <div class="form-control">
-            <label class="header">Profile Photo(optional):</label>
+          <script>
 
-            <input id="image" title="Profile Photo" type="file" name="profile_photo" placeholder="Photo" method="post" capture>
-          </div>
+          var password = document.getElementById("password")
+          var confirm_password = document.getElementById("confirm_password");
 
+          function validatePassword()
+          {
+            if(password.value == confirm_password.value)
+            {
+              confirm_password.setCustomValidity("Passwords Match");
+            }
+            else
+            {
+              confirm_password.setCustomValidity("Passwords Don't Match");
+            }
+          }
 
-          <br>
+          password.change = validatePassword();
+          confirm_password.onkeyup = validatePassword();
+        </script>
 
-          <div class="form-control">
-            <label class="header" title="Gender">Gender(*):</label><select name="gender" method="post" required>
-              <option value=" " selected> EMPTY </option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Rather Not Say">Rather Not Say</option>
-            </select>
-          </div>
+        <div class="form-control">
+          <label class="header">Profile Photo(optional):</label>
 
-          <br>
-
-
-          <div class="form-control">
-            <label class="header" title="Type of User">Type of User(*)</label><select name="type_of_user" method="post" required>
-              <option value=" " selected> EMPTY </option>
-              <option value="Customer">Customer</option>
-              <option value="Manager">Manager</option>
-              <option value="Both">Both</option>
-            </select>
-          </div>
-
-          
-          <br>
-          <div>
-            <input style="text-align: center;" type="submit" class="register" title="Submit" method="post" value="Register">
-          </div>
-
-
-
+          <input id="image" title="Profile Photo" type="file" name="profile_photo" placeholder="Photo" method="post" capture>
         </div>
 
-      </body>
-      </html>
+
+        <br>
+
+        <div class="form-control">
+          <label class="header" title="Gender">Gender(*):</label><select name="gender" method="post" required>
+            <option value=" " selected> EMPTY </option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Rather Not Say">Rather Not Say</option>
+          </select>
+        </div>
+
+        <br>
+
+
+        <div class="form-control">
+          <label class="header" title="Type of User">Type of User(*)</label><select name="type_of_user" method="post" required>
+            <option value=" " selected> EMPTY </option>
+            <option value="Customer">Customer</option>
+            <option value="Manager">Manager</option>
+            <option value="Both">Both</option>
+          </select>
+        </div>
+
+
+        <br>
+        <div>
+          <input style="text-align: center;" type="submit" class="register" title="Submit" method="post" value="Register">
+        </div>
+
+
+
+      </div>
+
+    </body>
+    </html>
