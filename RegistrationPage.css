@@ -50,7 +50,7 @@ input#image,input#name, input#email,input#phone_number, input#password,input#con
   -o-border-radius:30px;
   -ms-border-radius:30px;
 }
-input#name:focus,input#email:focus, input#phone_number:focus,input#password:focus, input#confirm_password:focus,input#gender:focus,input#type_of_user:focus,input#image:focus  {
+input#name:focus,input#email:focus, input#phone_number:focus,input#password:focus, input#confirm_password:focus,input#gender:focus,input#type_of_user:focus,input#image:focus,input#city:focus  {
   background-color:#f5f8fa !important;
   border:1px solid #dadada;
 }
