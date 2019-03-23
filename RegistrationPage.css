@@ -32,7 +32,7 @@ label.header {
   display: inline-block;
   font-family: 'Nunito', sans-serif;
 }
-input#image,input#name, input#email,input#phone_number, input#password,input#confirm_password,input#gender,input#type_of_user {
+input#image,input#name, input#email,input#phone_number, input#password,input#confirm_password,input#gender,input#type_of_user, input#city{
   padding:0 40px;
   width:40%;
   height:55px;
