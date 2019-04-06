@@ -37,7 +37,7 @@
       <input type="submit" id="add-event" value="Add Event" >
       <script type="text/javascript">
         document.getElementById("add-event").onclick = function () {
-          location.href = "AddEvent.html";
+          location.href = "AddEvent.jsp";
         };
       </script>
     </div>
@@ -48,7 +48,7 @@
       <input type="submit" id="delete-event" value="Delete Event" >
       <script type="text/javascript">
         document.getElementById("delete-event").onclick = function () {
-          location.href = "DeleteEvent.html";
+          location.href = "DeleteEvent.jsp";
         };
       </script>
     </div>
@@ -59,7 +59,7 @@
       <input type="submit" id="update-event" value="Update Event" >
       <script type="text/javascript">
         document.getElementById("update-event").onclick = function () {
-          location.href = "UpdateEvent.html";
+          location.href = "UpdateEvent.jsp";
         };
       </script>
     </div>

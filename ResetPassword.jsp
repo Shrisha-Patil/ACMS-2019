@@ -69,7 +69,7 @@
         <input type="submit" id="reset-password" value="Reset Password" >
         <script type="text/javascript">
           document.getElementById("reset-password").onclick = function () {
-            location.href = "LoginPage.html";
+            location.href = "LoginPage.jsp";
           };
         </script>
       </div>

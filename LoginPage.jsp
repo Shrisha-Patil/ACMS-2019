@@ -60,13 +60,13 @@
 
     <p>         </p>
 
-    <a href="ForgotPassword.html">
+    <a href="ForgotPassword.jsp">
       Forgot Password?</a>
 
 
       <br>
 
-      <p>Don't have an account?<a href="RegistrationPage.html" title="Register Here"> Register Here
+      <p>Don't have an account?<a href="RegistrationPage.jsp" title="Register Here"> Register Here
       </a></p>
 
     </body>

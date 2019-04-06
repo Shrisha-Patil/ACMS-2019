@@ -24,7 +24,7 @@
   <body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
+
 
     <div class="popcorn-loader-overlay"></div>
 
@@ -111,9 +111,7 @@
 
 <hr>
 
-<div>
-  <h3 style="text-align=center;">View Booking History</h3>
-</div>
+
 
 
 </div>

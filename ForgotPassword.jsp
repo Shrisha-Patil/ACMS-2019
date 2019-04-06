@@ -24,7 +24,7 @@
   <body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
+
 
     <div class="popcorn-loader-overlay"></div>
 
@@ -44,7 +44,7 @@
       <input type="submit" id="send-otp" value="Send OTP" >
       <script type="text/javascript">
         document.getElementById("send-otp").onclick = function () {
-          location.href = "EnterOTP.html";
+          location.href = "EnterOTP.jsp";
         };
 
 
