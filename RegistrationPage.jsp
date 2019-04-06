@@ -1,4 +1,6 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en" dir="ltr">
 
 <head>
@@ -62,6 +64,7 @@
           <br>
 
           <div class="form-control">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <label class="header">Confirm Password(*):</label>
             <input type="password" title="Confirm Password" name="confirm_password" id="confirm_password" method="post" placeholder="Confirm Password" required />
 
@@ -90,7 +93,7 @@
 
         <div class="form-control">
           <label class="header">City(*):</label>
-          
+
           <input type="city" title="city" id="city" method ="post" name="city" placeholder="City" required>
         </div>
 

@@ -7,13 +7,13 @@
 
   <meta charset="utf-8">
 
-  <link rel="stylesheet" type="text/css" href="ForgotPassword.css">
+  <link rel="stylesheet" type="text/css" href="Events.css">
 
-  <title>Forgot Password</title>
+  <title>Delete an Event</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>
-    jQuery(window).load(function(){Ã
+    jQuery(window).load(function(){
       jQuery(".popcorn-loader-overlay").fadeOut(1000);
     });
   </script>
@@ -26,24 +26,14 @@
   <body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="ForgotPassword.js"></script>
+
+
 
     <div class="popcorn-loader-overlay"></div>
 
-    <h1 style="text-align:center;">Enter OTP</h1>
-
-    <div style="text-align:center;" class="otp">
-      <label class="otp">Enter OTP:</label>
-      <input type="text" title="otp" id="otp" name="otp" placeholder="OTP"
-      required method="post">
-    </div>
-
-    <br>
-
     <div style="text-align:center;">
-      <input type="submit" id="enter-otp" value="Enter OTP" required method="post">
+      <h1>Delete an Event</h1>
     </div>
-
-  </body>
-
-  </html>
+    </body>
+    </html>
+    

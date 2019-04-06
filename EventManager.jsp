@@ -1,4 +1,6 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en" dir="ltr">
 
 <head>
@@ -59,7 +61,7 @@
       <input type="submit" id="update-event" value="Update Event" >
       <script type="text/javascript">
         document.getElementById("update-event").onclick = function () {
-          location.href = "UpdateEvent.jsp";
+          location.href = "EditEvent.jsp";
         };
       </script>
     </div>
