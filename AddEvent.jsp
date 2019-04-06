@@ -8,7 +8,7 @@
 
 <meta charset="utf-8" content="">
 
-<link rel="stylesheet" type="text/css" href="Events.css">
+<link rel="stylesheet" type="text/css" href="EventManager.css">
 
 <title>Add an Event</title>
 
