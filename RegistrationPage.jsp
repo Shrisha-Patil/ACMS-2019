@@ -57,40 +57,13 @@
           </div>
 
           <div class="form-control">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            
             <label class="header" name="password" id="password" type="password" title="password" method="post" placeholder="Password" required>Password(*):</label>
             <input type="password" id="password" title="Password" name="password" placeholder="Password" required/>
           </div>
           <br>
 
-          <div class="form-control">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            <label class="header">Confirm Password(*):</label>
-            <input type="password" title="Confirm Password" name="confirm_password" id="confirm_password" method="post" placeholder="Confirm Password" required />
-
-          </div>
-
-          <script>
-
-          var password = document.getElementById("password")
-          var confirm_password = document.getElementById("confirm_password");
-
-          function validatePassword()
-          {
-            if(password.value == confirm_password.value)
-            {
-              confirm_password.setCustomValidity("Passwords Match");
-            }
-            else
-            {
-              confirm_password.setCustomValidity("Passwords Don't Match");
-            }
-          }
-
-          password.change = validatePassword();
-          confirm_password.onkeyup = validatePassword();
-        </script>
-
+          
         <div class="form-control">
           <label class="header">City(*):</label>
 
