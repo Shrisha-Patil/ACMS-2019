@@ -63,7 +63,6 @@
           </div>
           <br>
 
-          
         <div class="form-control">
           <label class="header">City(*):</label>
 
