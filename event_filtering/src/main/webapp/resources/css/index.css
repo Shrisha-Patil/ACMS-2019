@@ -1,0 +1,151 @@
+*{
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+}
+
+.logo{
+
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 2.8em;
+}
+header{
+  width: 1300px;
+  height:4.5em;
+  color: white;
+  background-color: black;
+
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  height:auto;
+  width:89%;
+  padding-left: 40px;
+
+  }
+.icon{
+ float: right;
+ right: 20px;
+}*.
+
+  h1{
+      font-family: 'Cabin Sketch', cursive;
+      font-style: oblique;
+      font-size: 22px;
+      color: red;
+
+  }
+  .bar{
+    height:350px;
+    width: 1800px;
+  }
+  .container{
+
+      height: 100%;
+      width: 90%;
+      overflow: hidden;
+      justify-content: center;
+
+    }
+    .container .column{
+      top:-500px;
+      width: auto;
+      height:inherit;
+      float: left;
+      z-index: 1;
+    }
+
+    .container .column .content{
+      position:relative;
+      height: 100%;
+      left:250px;
+      padding-left: 40px;
+      padding-right: 40px;
+
+    }
+    .container .column .content p{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 100%;
+      margin: 12;
+      padding: 0;
+      color: rgba(255, 255, 0, 0.5);
+
+    }
+    .container .column .content .box{
+      position: relative;
+      top: 50%;
+      transform: translateY(100%);
+      box-sizing: border-box;
+      padding: 40px;
+      background: rgba(255, 0, 0, 0.5);
+      text-align: center;
+      transition: 0.5s;
+      opacity:0;
+    }
+
+    .container .column.active .content .box{
+        opacity:0;
+        transform: translate(-50%);
+    }
+    .container .column .bg
+    {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 1300px;
+      height:1150px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .container .column.active .bg.bg1{
+      background-color: #AFEEEE;
+      background-size:cover;
+      background-attachment: fixed;
+      background-position: center;
+      transition: 0.5s;
+    }
+    .container .column.active .bg.bg2{
+      background-color: #F08080;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      transition: 0.5s;
+    }
+    .container .column.active .bg.bg3{
+    background-color: #DEB887;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      transition: 0.5s;
+    }
+    .container .column.active .bg.bg4{
+      background-color: #DDA0DD;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      transition: 0.5s;
+    }
+    .trend{
+      padding-left: 100px;
+      padding-right: 100px;
+      width:700px;
+    }
+
+
+    .popcorn-loader-overlay {
+        width: 100%;
+        height: 100%;
+        background: url('popcorn.gif') center no-repeat #FFF;
+        z-index: 99999;
+        position: fixed;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
