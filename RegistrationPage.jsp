@@ -65,7 +65,7 @@
 
         <div class="form-control">
           <label class="header">City(*):</label>
-          
+
           <input type="city" title="city" id="city" method ="post" name="city" placeholder="City" required>
         </div>
 
