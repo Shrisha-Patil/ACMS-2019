@@ -26,7 +26,7 @@ jQuery(window).load(function(){
 
   <div class="popcorn-loader-overlay"></div>
 
-<h1><%=user.getname() %></h1>
+<h1>${name}</h1>
 <table>
     <tr>
         <th colspan="5" style="background-color:#7c2f97;">Profile</th>
@@ -39,16 +39,20 @@ jQuery(window).load(function(){
         <th class="border">Gender</th>
         <th class="border">Profile Photo</th>
     </tr>
-  
         <tr>
-            <td><%= user.getname() %></td>
-            <td><%= user.getEmail() %></td>
-            <td><%= user.getaddress() %></td>
-            <td><%= user.getphone_no() %></td>
-            <td><%= user.getgender() %></td>
-            <td><%= user.getphoto() %></td>
+            <td><font color="red">${name}</font></td>
+            <td><font color="red">${email}</font></td>
+            <td><font color="red">${address}</font></td>
+            <td><font color="red">${phone_no}</font></td>
+            <td><font color="red">${gender}</font></td>
+            <td><font color="red">${photo}</font></td>
         </tr>
-        <%}%>
+
 </table>
+
+<a href="ViewBookingHistory.jsp">View Your Booking History</a>
+
+<a href="UpdateProfile.html">Update Your Profile</a>
+
 </body>
 </html>
