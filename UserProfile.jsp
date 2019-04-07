@@ -47,7 +47,7 @@ jQuery(window).load(function(){
             <td><%= user.getgender() %></td>
             <td><%= user.getphoto() %></td>
         </tr>
-        <%}%>
+        
 </table>
 </body>
 </html>
