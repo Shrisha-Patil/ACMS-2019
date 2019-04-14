@@ -3,12 +3,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <style>
+  .popcorn-loader-overlay {
+      width: 100%;
+      height: 100%;
+      background: url('popcorn.gif') center no-repeat #FFF;
+      z-index: 99999;
+      position: fixed;
+  }
+
+  </style>
+
 
 <meta charset="utf-8">
 
 <title>View Booking History</title>
 
-<link rel="stylesheet"  type="text/css" href="Profile.css" />
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 jQuery(window).load(function(){

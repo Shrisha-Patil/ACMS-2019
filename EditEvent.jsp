@@ -7,7 +7,17 @@
 
   <meta charset="utf-8">
 
-  <link rel="stylesheet" type="text/css" href="Events.css">
+    <style>
+    .popcorn-loader-overlay {
+        width: 100%;
+        height: 100%;
+        background: url('popcorn.gif') center no-repeat #FFF;
+        z-index: 99999;
+        position: fixed;
+    }
+
+    </style>
+
 
   <title>Edit Your Events</title>
 
@@ -34,6 +44,6 @@
     <div style="text-align:center;">
       <h1>Edit an Event</h1>
     </div>
-    
+
     </body>
     </html>
