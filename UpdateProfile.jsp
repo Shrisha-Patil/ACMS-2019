@@ -1,7 +1,7 @@
+<%@ page contentType="text/html; charset=utf-8" language="java"%>
 
-<!DOCTYPE html >
-<html lang="en" dir="ltr">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
   <meta charset="utf-8">
@@ -45,59 +45,45 @@
   <form action="UserProfile.jsp" method="post">
 
     <div class="form-control">
-      <label class="header">Name(*):</label>
-      <input type="text" title="Name" id="name" name="name" placeholder="Name"
-      required method="post">
+      <label class="header">Name:</label>
+      <input type="text" title="Name" id="name" name="name" value="${name}"
+       method="post">
     </div>
 
 <br>
 
     <div class="form-control">
-      <label class="header">Phone Number(*):</label>
+      <label class="header">Phone Number:</label>
       <input type="tel" title="Phone Number" id="phone_number" name="phone_number"
-      placeholder="Phone Number" method="post" title="Please enter your Phone Number" required>
+      value="${phone_no}" method="post" title="Please enter your Phone Number" >
     </div>
 
-<br>
-
-    <div class="form-control">
-      <label class="header">Email(*):</label>
-      <input type="email" title="Email" id="email" method ="post" name="email" placeholder="Email" required>
-    </div>
-
-<br>
-
-    <div class="form-control">
-      <label class="header" name="password" id="password" type="password" title="password" method="post" placeholder="Password" required>Password(*):</label>
-      <input type="password" id="password" title="Password" name="password" placeholder="Password" required/>
-    </div>
 
 
 <br>
 
-    <div class="form-control">
-      <label class="header">Profile Photo(optional):</label>
+<div class="form-control">
+  <label class="header">City:</label>
+  <input type="text" title="City" id="city" name="city"
+  value="${address}" method="post" title="Please enter your City" >
+</div>
 
-      <input id="image" title="Profile Photo" type="file" name="profile_photo" placeholder="Photo" method="post" capture>
+<br>
+
+    <div class="form-control">
+      <label class="header">Profile Photo:</label>
+
+      <input id="image" title="Profile Photo" type="file" name="profile_photo" value="${photo}" method="post" capture>
     </div>
 
 
 <br>
 
-    <div class="form-control">
-      <label class="header" title="Gender">Gender(*):</label><select name="gender" method="post" required>
-        <option value=" " selected> EMPTY </option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Rather Not Say">Rather Not Say</option>
-      </select>
-    </div>
 
-<br>
 
 
     <div class="form-control">
-      <label class="header" title="Type of User">Type of User(*)</label><select name="type_of_user" method="post" required>
+      <label class="header" title="Type of User">Type of User</label><select name="type_of_user" method="post" >
         <option value=" " selected> EMPTY </option>
         <option value="Customer">Customer</option>
         <option value="Manager">Manager</option>

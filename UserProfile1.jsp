@@ -48,6 +48,7 @@ jQuery(window).load(function(){
         <th class="border">Phone Number</th>
         <th class="border">Gender</th>
         <th class="border">Profile Photo</th>
+        <th class="border">City</th>
     </tr>
         <tr>
             <td><font color="red">${name}</font></td>
@@ -56,13 +57,14 @@ jQuery(window).load(function(){
             <td><font color="red">${phone_no}</font></td>
             <td><font color="red">${gender}</font></td>
             <td><font color="red">${photo}</font></td>
+            <td><font color="red">${address}</font></td>
         </tr>
 
 </table>
 
 <a href="ViewBookingHistory.jsp">View Your Booking History</a>
 
-<a href="UpdateProfile.html">Update Your Profile</a>
+<a href="UpdateProfile.jsp">Update Your Profile</a>
 
 
 <a href="ResetPassword.html">Reset Your Password</a>
