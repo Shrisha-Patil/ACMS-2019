@@ -46,7 +46,7 @@
 
     <div class="form-control">
       <label class="header">Name:</label>
-      <input type="text" title="Name" id="name" name="name" value="${name}"
+      <input type="text" title="Name" id="name" name="name" value= "${name}"
        method="post">
     </div>
 
@@ -55,7 +55,7 @@
     <div class="form-control">
       <label class="header">Phone Number:</label>
       <input type="tel" title="Phone Number" id="phone_number" name="phone_number"
-      value="${phone_no}" method="post" title="Please enter your Phone Number" >
+      value="${phone_no}" method="post" title="Phone Number" >
     </div>
 
 
@@ -65,7 +65,7 @@
 <div class="form-control">
   <label class="header">City:</label>
   <input type="text" title="City" id="city" name="city"
-  value="${address}" method="post" title="Please enter your City" >
+  value="${address}" method="post" title="City" >
 </div>
 
 <br>
