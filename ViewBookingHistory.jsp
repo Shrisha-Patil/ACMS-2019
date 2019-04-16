@@ -54,7 +54,7 @@ jQuery(window).load(function(){
         <th class="border">Time</th>
         <th class="border">Venue</th>
     </tr>
-    <script language="javascript" type="text/javascript">
+
 
     for(var a=0;a<10;a++){
         <tr>
@@ -66,7 +66,6 @@ jQuery(window).load(function(){
             <td><font color="red">${venue}</font></td>
         </tr>
 }
-</script>
 </table>
 
 <a href="UserProfile1.jsp">View Your Profile</a>
