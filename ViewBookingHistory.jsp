@@ -16,6 +16,8 @@
 
 
     <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
       <title>View Booking History</title>
 
@@ -40,38 +42,41 @@
       <div style="text-align:center;">
         <h1>View Your Booking History</h1>
       </div>
-
       <h1>${name}</h1>
       <table>
-        <tr>
-          <th colspan="5" style="background-color:#7c2f97;">Booking History</th>
-        </tr>
-        <tr style="background-color:#f0a64e;">
-          <th class="border">Index</th>
-          <th class="border">Booking ID</th>
-          <th class="border">Event Name</th>
-          <th class="border">Cost per Ticket</th>
-          <th class="border">Seats</th>
-          <th class="border">Date</th>
-          <th class="border">Time</th>
-          <th class="border">Venue</th>
-        </tr>
-
-        <script>
-        for(${index}=1;;${index}++){
+        <thead>
           <tr>
-          <td><font color="red">${index}</font></td>
-          <td><font color="red">${booking_id}</font></td>
-          <td><font color="red">${event_name}</font></td>
-          <td><font color="red">${cost_per_ticket}</font></td>
-          <td><font color="red">${seat_id}</font></td>
-          <td><font color="red">${date}</font></td>
-          <td><font color="red">${time}</font></td>
-          <td><font color="red">${venue}</font></td>
+            <th colspan="6" style="background-color:#7c2f97;">Booking History</th>
           </tr>
-        }
-      </script>
+          <tr style="background-color:#f0a64e;">
+            <th class="border">Event ID</th>
+            <th class="border">Event Name</th>
+            <th class="border">Cost per Ticket</th>
+            <th class="border">Date</th>
+            <th class="border">Time</th>
+            <th class="border">Venue</th>
+          </tr>
+        </thead>
+        <tbody id="booking-history">
+        </tbody>
     </table>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript">
+  
+
+    for(booking of history) {
+      result += '<tr>'+
+            '<td><font color="red">'+booking.event_id+'</font></td>'+
+            '<td><font color="red">'+booking.event_name+'</font></td>'+
+            '<td><font color="red">'+booking.cost_per_ticket+'</font></td>'+
+            '<td><font color="red">'+booking.date+'</font></td>'+
+            '<td><font color="red">'+booking.time+'</font></td>'+
+            '<td><font color="red">'+booking.venue+'</font></td>'+
+          '</tr>';
+    }
+
+    $("#booking-history").html(result);
+  </script>
 
     <a href="UserProfile1.jsp">View Your Profile</a>
 
