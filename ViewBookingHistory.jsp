@@ -62,16 +62,16 @@
     </table>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script type="text/javascript">
-  
 
-    for(booking of history) {
+
+    for(history of history) {
       result += '<tr>'+
-            '<td><font color="red">'+booking.event_id+'</font></td>'+
-            '<td><font color="red">'+booking.event_name+'</font></td>'+
-            '<td><font color="red">'+booking.cost_per_ticket+'</font></td>'+
-            '<td><font color="red">'+booking.date+'</font></td>'+
-            '<td><font color="red">'+booking.time+'</font></td>'+
-            '<td><font color="red">'+booking.venue+'</font></td>'+
+            '<td><font color="red">'+history.event_id+'</font></td>'+
+            '<td><font color="red">'+history.event_name+'</font></td>'+
+            '<td><font color="red">'+history.cost_per_ticket+'</font></td>'+
+            '<td><font color="red">'+history.date+'</font></td>'+
+            '<td><font color="red">'+history.time+'</font></td>'+
+            '<td><font color="red">'+history.venue+'</font></td>'+
           '</tr>';
     }
 
