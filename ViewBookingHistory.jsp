@@ -58,14 +58,14 @@
         </tr>
 
         <script>
-        for(${index}=1;${index}<50;${index}++){
+        for(${index}=1;;${index}++){
           <tr>
           <td><font color="red">${index}</font></td>
           <td><font color="red">${booking_id}</font></td>
           <td><font color="red">${event_name}</font></td>
           <td><font color="red">${cost_per_ticket}</font></td>
           <td><font color="red">${seat_id}</font></td>
-          <td><font color="red">${Date}</font></td>
+          <td><font color="red">${date}</font></td>
           <td><font color="red">${time}</font></td>
           <td><font color="red">${venue}</font></td>
           </tr>
