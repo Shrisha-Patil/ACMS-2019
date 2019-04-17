@@ -64,14 +64,14 @@
   <script type="text/javascript">
 
 
-    for(history of history) {
+    for(h in history) {
       result += '<tr>'+
-            '<td><font color="red">'+history.event_id+'</font></td>'+
-            '<td><font color="red">'+history.event_name+'</font></td>'+
-            '<td><font color="red">'+history.cost_per_ticket+'</font></td>'+
-            '<td><font color="red">'+history.date+'</font></td>'+
-            '<td><font color="red">'+history.time+'</font></td>'+
-            '<td><font color="red">'+history.venue+'</font></td>'+
+            '<td><font color="red">'+h.event_id+'</font></td>'+
+            '<td><font color="red">'+h.event_name+'</font></td>'+
+            '<td><font color="red">'+h.cost_per_ticket+'</font></td>'+
+            '<td><font color="red">'+h.date+'</font></td>'+
+            '<td><font color="red">'+h.time+'</font></td>'+
+            '<td><font color="red">'+h.venue+'</font></td>'+
           '</tr>';
           result++;
     }
