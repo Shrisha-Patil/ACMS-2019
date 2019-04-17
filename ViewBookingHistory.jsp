@@ -73,6 +73,7 @@
             '<td><font color="red">'+history.time+'</font></td>'+
             '<td><font color="red">'+history.venue+'</font></td>'+
           '</tr>';
+          result++;
     }
 
     $("#booking-history").html(result);
