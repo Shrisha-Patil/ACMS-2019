@@ -5,18 +5,64 @@
   <meta charset="utf-8">
 
   <style>
-  .popcorn-loader-overlay {
-      width: 100%;
-      height: 100%;
-      background: url('popcorn.gif') center no-repeat #FFF;
-      z-index: 99999;
-      position: fixed;
+  html{
+    padding:0;
+    margin:0;
   }
+  body{
+    background-color: #2a1b3d;
+    color:white;
+  }
+  .popcorn-loader-overlay {
+    width: 100%;
+    height: 100%;
+    background: url('popcorn.gif') center no-repeat #FFF;
+    z-index: 99999;
+    position: fixed;
+  }
+  .login{
+    width: 50%;
+    margin: 70px 25% 80%;
+    padding: 0;
+    display: table;
+    position: relative;
+  }
+  header{
+    width: 100%;
+    color: #D83F87;
+    background-color: #8466a2;
+    margin:0;
+    padding:0;
+    position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 65px;
 
+  }
+  .logo{
+    position: absolute;
+    vertical-align: middle;
+    font-family: 'Fredericka the Great';
+    font-size: 2.8em;
+    color:white;
+  }
+  *{
+    margin:0;
+    padding:0;
+}
+.space{
+  margin:5px;
+
+}
   </style>
 
 
   <title> Login Page </title>
+  <!--icons & fonts-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>
   jQuery(window).load(function(){
@@ -30,53 +76,74 @@
 
   </head>
 
-  <body>
+  <body link="#a4b3b6" vlink="#d83f87" alink="white">
+    <header>
+      <div class="headermenu">
+        <div class="logo">
+          <a href="index.html">eQarth</a>
 
+        </div>
+
+      </div>
+    </header>
     <div class="popcorn-loader-overlay"></div>
 
-    <h1>Login to your account</h1>
+<div class="space">
+  <br>
+  <br>
 
-    <form method="post">
+    <div style="text-align:center;" class="login">
 
-      <label for="username">Username:</label>
+      <h1>Login to your account</h1>
+<br>
+<br>
+    <div style="text-align:center;">
+      <form method="post">
 
-      <input id="username" name="username" type="text"
-     title="Username" method="post">
+        <label for="username">Username:</label>
 
-      <p>       </p>
-
-      <label for="pw">Password:</label>
-
-      <input id="pw" name="pw" type="password" required
-      minlength="8" maxlength="20" title="Password" method="post">
+        <input id="username" name="username" type="text"
+        title="Username" method="post">
 
       <br>
+      <br>
 
-      <p>         </p>
+        <label for="pw">Password:</label>
 
-      <input type="submit" title="Log In" value="Log In">
+        <input id="pw" name="pw" type="password" required
+        minlength="8" maxlength="20" title="Password" method="post">
 
-    </form>
+        <br>
+<br>
+
+        <input type="submit" title="Log In" value="Log In">
+
+      </form>
+
+      <br>
+      <br>
+
+      <input id="rememberme" type="checkbox"
+      name="rememberme"
+      title="Keep Me Signed In">
+
+      <label for="rememberme">Keep Me Signed In</label>
 
     <br>
+    <br>
 
-    <input id="rememberme" type="checkbox"
-    name="rememberme"
-    title="Keep Me Signed In">
-
-    <label for="rememberme">Keep Me Signed In</label>
-
-    <p>         </p>
-
-    <a href="ForgotPassword.html">
-      Forgot Password?</a>
+      <a href="ForgotPassword.html">
+        Forgot Password?</a>
 
 
-      <br>
+        <br>
+        <br>
 
-      <p>Don't have an account?<a href="RegistrationPage.html" title="Register Here"> Register Here
-      </a></p>
-
+        <p>Don't have an account?<a href="RegistrationPage.html" title="Register Here"> Register Here
+        </a></p>
+      </div>
+    </div>
+  </div>
     </body>
 
     </html>
