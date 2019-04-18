@@ -8,19 +8,66 @@
 <meta charset="utf-8" content="">
 
 <style>
+html{
+	padding:0;
+	margin:0;
+}
+body{
+	background-color: #2a1b3d;
+	color:white;
+	text-align: center;
+}
 .popcorn-loader-overlay {
-		width: 100%;
-		height: 100%;
-		background: url('popcorn.gif') center no-repeat #FFF;
-		z-index: 99999;
-		position: fixed;
+	width: 100%;
+	height: 100%;
+	background: url('popcorn.gif') center no-repeat #FFF;
+	z-index: 99999;
+	position: fixed;
+}
+.addevent{
+	margin-top: 70px;
+	padding: 0;
+	text-align: center;
+}
+header{
+	width: 100%;
+	color: #D83F87;
+	background-color: #8466a2;
+	margin:0;
+	padding:0;
+	position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 65px;
+
+}
+.logo{
+	position: absolute;
+	vertical-align: middle;
+	font-family: 'Fredericka the Great';
+	font-size: 2.8em;
+	color:white;
+}
+*{
+	margin:0;
+	padding:0;
+}
+.space{
+margin:5px;
+
 }
 
 </style>
 
 
 <title>Add an Event</title>
-
+<!--icons & fonts-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
 	type="text/javascript"></script>
@@ -40,18 +87,27 @@
 
 </head>
 
-<body>
+<body link="#a4b3b6" vlink="#d83f87" alink="white">
+	<header>
+		<div class="headermenu">
+			<div class="logo">
+				<a href="index.html">eQarth</a>
 
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
-		type="text/javascript"></script>
+			</div>
 
+		</div>
+	</header>
 
 	<div class="popcorn-loader-overlay"></div>
+<br>
+<br>
 
-	<div style="text-align: center;">
+	<div style="text-align: center;" class="addevent">
 		<h1>Add an Event</h1>
 	</div>
+	<br>
+	<br>
+
 
 	<form action="#" method="post">
 
@@ -62,13 +118,15 @@
           </div>
 
 <br>
+<br>
 
 					<div class="form-control">
             <label class="header">City of the Event:</label>
-            <input type="text" title="City" id="city" name="city" placeholder="city"
+            <input type="text" title="City" id="city" name="city" placeholder="City"
             required method="post">
           </div>
 
+<br>
 <br>
 
 					<div class="form-control">
@@ -78,7 +136,7 @@
 					</div>
 
 <br>
-
+<br>
 					<div class="form-control">
 						<label class="header">Venue Address:</label>
 						<input type="text" title="Venue Address" id="venue_address" name="venue_address" placeholder="Venue Address"
@@ -86,10 +144,10 @@
 					</div>
 
 <br>
-
+<br>
 
 					<div class="form-control">
-						<label class="header" title="Type of Event">Type of Event(*)</label><select name="type_of_event" method="post" required>
+						<label class="header" title="Type of Event">Type of Event(*):</label><select name="type_of_event" method="post" required>
 							<option value=" " selected> EMPTY </option>
 							<option value="Movie">Movie</option>
 							<option value="Concert">Concert</option>
@@ -100,7 +158,7 @@
 					</div>
 
 <br>
-
+<br>
 <div>
 	<input style="text-align: center;" type="submit" class="submit" title="Submit" method="post" value="Submit">
 </div>
