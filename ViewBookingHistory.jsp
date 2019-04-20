@@ -18,77 +18,69 @@
 
 
     <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-          <title>View Booking History</title>
+      <title>View Booking History</title>
 
 
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-          <script>
-          jQuery(window).load(function(){
-            jQuery(".popcorn-loader-overlay").fadeOut(1000);
-          });
-          </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script>
+      jQuery(window).load(function(){
+        jQuery(".popcorn-loader-overlay").fadeOut(1000);
+      });
+      </script>
 
-          <noscript>
-            <style>.popcorn-loader-overlay { display: none; } </style> </noscript>
+      <noscript>
+        <style>.popcorn-loader-overlay { display: none; } </style> </noscript>
 
-          </head>
-          <body>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-
-            <div class="popcorn-loader-overlay"></div>
-
-            <div style="text-align:center;">
-              <h1>View Your Booking History</h1>
-            </div>
-            <script type="text/template" id="trans-template">
-              <li class="confirmation-card" data-role="card" data-booking-id="{{Booking_id}}">
-                <aside class="details">
-                  <div class="booking-id">BOOKING ID
-                    <br><span class="_bkn_id"><strong>{{booking_id}}</strong></span>
-                  </div>
-                </div>
-                <div class="text">
-                  <div class="inner-text">
-                    <div class="show-details">
-                      <div class="cinema-name">
-                        <span class="__cinema-text">Cinema</span>
-                        <span class="__cinema-name">{{ venue }}</span>
-                      </div>
-                      <div class="show-time">
-                        <span class="__showdate-text">Date &amp; Time</span>
-                        <span class="__showdate">{{ Date }}</span>
-                        <span class="__showtime">{{ time }}</span>
-                      </div>
-                      <div class="quantity">
-                        <span class="__quantity-text">Quantity</span>
-                        <span class="__quantity">{{ tickets }}</span>
-                      </div>
-                      <div class="seat_id">
-                        <span class="__seat_id_name">Seat IDs</span>
-                        <span class="__seat_ids">{{ seats }}</span>
-                      </div>
-                      <div class="movie-name">
-                        <span class="__movie-text">Event</span>
-                        <span class="__movie-name">{{ event_name }}</span>
-                      </div>
-                      <div class="price">
-                        <span class="price-text">Price</span>
-                        <span class="__price-amount">{{ amount }}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </aside>
-            </li>
-          </script>
-          
+      </head>
+      <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
-                    <a href="UserProfile1.jsp">View Your Profile</a>
+        <div class="popcorn-loader-overlay"></div>
 
-                  </body>
-                  </html>
+        <div style="text-align:center;">
+          <h1>View Your Booking History</h1>
+        </div>
+
+        <div class="container">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Event Name</th>
+                <th>Amount</th>
+                <th>Number of Tickets</th>
+                <th>Seats</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Venue</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <c:forEach items="${history}" var="hist">
+                <tr>
+                  <td>${hist.Booking_id}</td>
+                  <td>${hist.event_name}</td>
+                  <td>${hist.amount}</td>
+                  <td>${hist.quantity}</td>
+                  <td>${hist.seats}</td>
+                  <td>${hist.date}</td>
+                  <td>${hist.time}</td>
+                  <td>${hist.venue}</td>
+                </tr>
+              </c:forEach>
+            </tbody>
+          </table>
+        </div>
+
+    <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+  <a href="UserProfile1.jsp">View Your Profile</a>
+
+ </body>
+</html>
