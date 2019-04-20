@@ -4,70 +4,158 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <style>
-  .popcorn-loader-overlay {
-      width: 100%;
-      height: 100%;
-      background: url('popcorn.gif') center no-repeat #FFF;
-      z-index: 99999;
-      position: fixed;
+  html{
+    padding:0;
+    margin:0;
   }
+  body{
+    background-image:url(projector.jpg);
+    background-position: top 80px left 100px;
+    background-color: #45a29e;
+    background-size: 25%;
+    color:white;
+    scroll-padding: 100px;
+    text-align: center;
+  }
+  .popcorn-loader-overlay {
+    width: 100%;
+    height: 100%;
+    background: url('popcorn.gif') center no-repeat #FFF;
+    z-index: 99999;
+    position: fixed;
+  }
+  header{
+    width: 100%;
+    background-color: #1f2833;
+    margin:0;
+    padding:0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
 
+  }
+  .logo{
+    margin-left: 15px;
+    position: absolute;
+    vertical-align: middle;
+    font-family: 'Fredericka the Great';
+    font-size: 2.8em;
+    color:white;
+  }
+  *{
+    margin:0;
+    padding:0;
+  }
+  .font{
+    font-family: 'Cabin Sketch', cursive;
+    align-self: auto;
+  }
+  #booking-history,#update-profile,#reset-password{
+    align-self:center;
+    background-color: #0b0c10;
+    width: 40%;
+    margin:20px;
+    height: 55px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    -ms-border-radius: 30px;
+  }
+  #booking-history:hover {
+    background-color:#c5c6c7;
+    color:#fff;
+  }
+  #update-profile:hover {
+    background-color:#c5c6c7;
+    color:#fff;
+  }
+  #reset-password:hover {
+    background-color:#c5c6c7;
+    color:#fff;
+  }
   </style>
 
-<meta charset="utf-8">
+  <meta charset="utf-8">
 
-<title>View Profile</title>
+  <title>View Profile</title>
+  <!--icons & fonts-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-jQuery(window).load(function(){
-  jQuery(".popcorn-loader-overlay").fadeOut(1000);
-});
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+  jQuery(window).load(function(){
+    jQuery(".popcorn-loader-overlay").fadeOut(1000);
+  });
 </script>
 
 <noscript>
   <style>.popcorn-loader-overlay { display: none; } </style> </noscript>
 
 </head>
-<body>
+<body style="overflow:hidden;" link="#66fcf1" vlink="white" alink="#0b0c10">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="RegistrationPage.js"></script>
+  <header>
+    <div class="headermenu">
+      <div class="logo">
+        <a href="index.html">eQarth</a>
+      </header>
 
-  <div class="popcorn-loader-overlay"></div>
+      <div class="popcorn-loader-overlay"></div>
+      <div class="font">
+        <br>
+        <br>
+        <br>
 
-<h1>${name}</h1>
-<table>
-    <tr>
-        <th colspan="5" style="background-color:#7c2f97;">Profile</th>
-    </tr>
-    <tr style="background-color:#f0a64e;">
-        <th class="border">Name</th>
-        <th class="border">Email</th>
-        <th class="border">Address</th>
-        <th class="border">Phone Number</th>
-        <th class="border">Gender</th>
-        <th class="border">Profile Photo</th>
-        <th class="border">City</th>
-    </tr>
-        <tr>
-            <td><font color="red">${name}</font></td>
-            <td><font color="red">${email}</font></td>
-            <td><font color="red">${address}</font></td>
-            <td><font color="red">${phone_no}</font></td>
-            <td><font color="red">${gender}</font></td>
-            <td><font color="red">${photo}</font></td>
-            <td><font color="red">${address}</font></td>
-        </tr>
+        <h1><mark style="background-color:#1f2833; color:white;">Your Profile</mark></h1>
+        <br>
+        <br>
+        <span><mark style="background-color:#1f2833; color:white;">Name: ${name}</mark></span>
+        <br>
+        <br>
+        <span><mark style="background-color:#1f2833; color:white;">Email: ${email}</mark></span>
+        <br>
+        <br>
+        <span><mark style="background-color:#1f2833; color:white;">Address: ${address}</mark></span>
+        <br>
+        <br>
+        <span><mark style="background-color:#1f2833; color:white;">Phone Number: ${phone_no}</mark></span>
+        <br>
+        <br>
+        <span><mark style="background-color:#1f2833; color:white;">Gender: ${gender}</mark></span>
+        <br>
+        <br>
+        <span><mark style="background-color:#1f2833; color:white;">Profile Photo: ${photo}</mark></span>
+        <br>
+        <br>
+        <span><mark style="background-color:#1f2833; color:white;">City: ${city}</mark></span>
 
-</table>
+        <br>
+        <br>
+        <a href="ViewBookingHistory.jsp" id="booking-history">View Your Booking History</a>
+        <br>
+        <br>
+        <a href="UpdateProfile.jsp" id="update-profile">Update Your Profile</a>
+        <br>
+        <br>
 
-<a href="ViewBookingHistory.jsp">View Your Booking History</a>
-
-<a href="UpdateProfile.jsp">Update Your Profile</a>
-
-
-<a href="ResetPassword.html">Reset Your Password</a>
-
-</body>
-</html>
+        <a href="ResetPassword.html" id="reset-password">Reset Your Password</a>
+      </div>
+    </body>
+    </html>
