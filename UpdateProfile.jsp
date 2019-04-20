@@ -192,14 +192,7 @@
 <br>
 
 
-    <div style="text-align: center;">
-      <input type="submit" id="change" value="Save Changes" >
-      <script type="text/javascript">
-        document.getElementById("change").onclick = function () {
-          location.href = "UserProfile1.jsp";
-        };
-      </script>
-    </div>
+  <a href="UserProfile1.jsp"><mark style="background-color:#1f2833; color:white;">Save Your Changes and Go Back to Your Profile</mark></a>
 
 
 </form>

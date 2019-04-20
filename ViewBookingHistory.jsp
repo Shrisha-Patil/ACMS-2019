@@ -162,11 +162,11 @@
             <tbody>
               <c:forEach items="${history}" var="hist">
                 <tr>
-                  <td>${hist.Booking_id}</td>
+                  <td>${hist.booking_id}</td>
                   <td>${hist.event_name}</td>
-                  <td>${hist.amount}</td>
+                  <td>${hist.price}</td>
                   <td>${hist.quantity}</td>
-                  <td>${hist.seats}</td>
+                  <td>${hist.seat_id}</td>
                   <td>${hist.date}</td>
                   <td>${hist.time}</td>
                   <td>${hist.venue}</td>
