@@ -10,8 +10,12 @@
     margin:0;
   }
   body{
-    background-color: #2a1b3d;
+    background-image:url(projector.jpg);
+    background-position: top 80px left 100px;
+    background-color: #45a29e;
+    background-size: 25%;
     color:white;
+    scroll-padding: 100px;
   }
   .popcorn-loader-overlay {
     width: 100%;
@@ -29,8 +33,7 @@
   }
   header{
     width: 100%;
-    color: #D83F87;
-    background-color: #8466a2;
+    background-color: #1f2833;
     margin:0;
     padding:0;
     position: absolute;
@@ -54,8 +57,55 @@
 }
 .space{
   margin:5px;
-
 }
+.font{
+  font-family: 'Cabin Sketch', cursive;
+}
+  #login{
+    align-self:center;
+    background-color: #0b0c10;
+    width: 40%;
+    margin:20px;
+    height: 55px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    -ms-border-radius: 30px;
+  }
+  #login:hover {
+    background-color:#c5c6c7;
+    color:#fff;
+  }
+  input#username,input#pw{
+    padding:0 40px;
+    width:20%;
+    height:45px;
+    border: 1px solid #dadada;
+    color: #c5c6c7;
+    text-align:justify;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight:normal;
+    font-family: 'Cabin Sketch', cursive;
+    border-radius:30px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -o-border-radius:30px;
+    -ms-border-radius:30px;
+  }
   </style>
 
 
@@ -77,47 +127,45 @@
 
   </head>
 
-  <body style="overflow:hidden;" link="#a4b3b6" vlink="#d83f87" alink="white">
+  <body style="overflow:hidden;" link="#66fcf1" vlink="white" alink="#0b0c10">
+
     <header>
       <div class="headermenu">
         <div class="logo">
           <a href="index.html">eQarth</a>
-
-        </div>
-
-      </div>
     </header>
+
     <div class="popcorn-loader-overlay"></div>
 
 <div class="space">
   <br>
   <br>
-
+<div class="font">
     <div style="text-align:center;" class="login">
 
-      <h1>Login to your account</h1>
+      <h1 ><mark style="background-color:#1f2833; color:white;">Login to your account</mark></h1>
 <br>
 <br>
     <div style="text-align:center;">
       <form method="post">
 
-        <label for="username">Username:</label>
+        <label for="username"><mark style="background-color:#1f2833; color:white;">Username:</mark></label>
 
         <input id="username" name="username" type="text"
-        title="Username" method="post">
+        title="Username" method="post" placeholder="Username">
 
       <br>
       <br>
 
-        <label for="pw">Password:</label>
+        <label for="pw"><mark style="background-color:#1f2833; color:white;">Password:</mark></label>
 
         <input id="pw" name="pw" type="password" required
-        minlength="8" maxlength="20" title="Password" method="post">
+        minlength="8" maxlength="20" title="Password" placeholder="Password" method="post">
 
         <br>
 <br>
 
-        <input type="submit" title="Log In" value="Log In">
+        <input type="submit" id="login" title="Log In" value="Log In">
 
       </form>
 
@@ -128,7 +176,7 @@
       name="rememberme"
       title="Keep Me Signed In">
 
-      <label for="rememberme">Keep Me Signed In</label>
+      <label for="rememberme"><mark style="background-color:#1f2833; color:white;">Keep Me Signed In</mark></label>
 
     <br>
     <br>
@@ -140,11 +188,12 @@
         <br>
         <br>
 
-        <p>Don't have an account?<a href="RegistrationPage.html" title="Register Here"> Register Here
+        <p><mark style="background-color:#1f2833; color:white;">Don't have an account?</mark><a href="RegistrationPage.html" title="Register Here"> Register Here
         </a></p>
       </div>
     </div>
   </div>
+</div>
     </body>
 
     </html>
