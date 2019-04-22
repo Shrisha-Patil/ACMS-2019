@@ -80,24 +80,6 @@
         background-color:#c5c6c7;
         color:#fff;
       }
-      input#username,input#pw{
-        padding:0 40px;
-        width:20%;
-        height:45px;
-        border: 1px solid #dadada;
-        color: #c5c6c7;
-        text-align:justify;
-        outline: none;
-        letter-spacing: 1px;
-        font-size: 16px;
-        font-weight:normal;
-        font-family: 'Cabin Sketch', cursive;
-        border-radius:30px;
-        -webkit-border-radius:30px;
-        -moz-border-radius:30px;
-        -o-border-radius:30px;
-        -ms-border-radius:30px;
-      }
     table.center{
       margin-left:auto;
       margin-right:auto;
