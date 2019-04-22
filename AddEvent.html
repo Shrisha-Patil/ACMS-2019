@@ -13,9 +13,12 @@ html{
 	margin:0;
 }
 body{
-	background-color: #2a1b3d;
+	background-image:url(projector.jpg);
+	background-position: top 80px left 100px;
+	background-color: #45a29e;
+	background-size: 25%;
 	color:white;
-	text-align: center;
+	scroll-padding: 100px;
 }
 .popcorn-loader-overlay {
 	width: 100%;
@@ -24,15 +27,9 @@ body{
 	z-index: 99999;
 	position: fixed;
 }
-.addevent{
-	margin-top: 70px;
-	padding: 0;
-	text-align: center;
-}
 header{
 	width: 100%;
-	color: #D83F87;
-	background-color: #8466a2;
+	background-color: #1f2833;
 	margin:0;
 	padding:0;
 	position: absolute;
@@ -43,6 +40,7 @@ header{
 
 }
 .logo{
+	margin-left: 15px;
 	position: absolute;
 	vertical-align: middle;
 	font-family: 'Fredericka the Great';
@@ -53,11 +51,54 @@ header{
 	margin:0;
 	padding:0;
 }
-.space{
-margin:5px;
-
+.font{
+  font-family: 'Cabin Sketch', cursive;
 }
-
+  #submit{
+    align-self:center;
+    background-color: #0b0c10;
+    width: 30%;
+    margin:20px;
+    height: 55px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    -ms-border-radius: 30px;
+  }
+  #submit:hover {
+    background-color:#c5c6c7;
+    color:#fff;
+  }
+  input#name,input#city,input#price_per_ticket,input#venue_address{
+    padding:0 40px;
+    width:20%;
+    height:45px;
+    border: 1px solid #dadada;
+    color: black;
+    text-align:justify;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight:normal;
+    font-family: 'Cabin Sketch', cursive;
+    border-radius:30px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -o-border-radius:30px;
+    -ms-border-radius:30px;
+  }
 </style>
 
 
@@ -67,9 +108,7 @@ margin:5px;
 <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
 	type="text/javascript"></script>
 <script type="text/javascript">
 	jQuery(window).load(function() {
@@ -87,7 +126,8 @@ margin:5px;
 
 </head>
 
-<body link="#a4b3b6" vlink="#d83f87" alink="white">
+<body style="overflow:hidden;" link="#66fcf1" vlink="white" alink="#0b0c10">
+
 	<header>
 		<div class="headermenu">
 			<div class="logo">
@@ -101,18 +141,21 @@ margin:5px;
 	<div class="popcorn-loader-overlay"></div>
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<div class="font">
 	<div style="text-align: center;" class="addevent">
-		<h1>Add an Event</h1>
+		<h1><mark style="background-color:#1f2833; color:white;">Add an Event</mark></h1>
 	</div>
 	<br>
 	<br>
 
 
-	<form action="#" method="post">
+	<form action="#" method="post" style="text-align:center;">
 
           <div class="form-control">
-            <label class="header">Name of the Event:</label>
+            <label class="header"><mark style="background-color:#1f2833; color:white;">Name of the Event:</mark></label>
             <input type="text" title="Name" id="name" name="name" placeholder="Name"
             required method="post">
           </div>
@@ -121,7 +164,7 @@ margin:5px;
 <br>
 
 					<div class="form-control">
-            <label class="header">City of the Event:</label>
+            <label class="header"><mark style="background-color:#1f2833; color:white;">City of the Event:</mark></label>
             <input type="text" title="City" id="city" name="city" placeholder="City"
             required method="post">
           </div>
@@ -130,7 +173,7 @@ margin:5px;
 <br>
 
 					<div class="form-control">
-						<label class="header">Price per Ticket:</label>
+						<label class="header"><mark style="background-color:#1f2833; color:white;">Price per Ticket:</mark></label>
 						<input type="text" title="Price Per Ticket" id="price_per_ticket" name="price_per_ticket" placeholder="Price Per Ticket"
 						required method="post">
 					</div>
@@ -138,7 +181,7 @@ margin:5px;
 <br>
 <br>
 					<div class="form-control">
-						<label class="header">Venue Address:</label>
+						<label class="header"><mark style="background-color:#1f2833; color:white;">Venue Address:</mark></label>
 						<input type="text" title="Venue Address" id="venue_address" name="venue_address" placeholder="Venue Address"
 						required method="post">
 					</div>
@@ -147,7 +190,8 @@ margin:5px;
 <br>
 
 					<div class="form-control">
-						<label class="header" title="Type of Event">Type of Event(*):</label><select name="type_of_event" method="post" required>
+						<label class="header" title="Type of Event"><mark style="background-color:#1f2833; color:white;">Type of Event(*):</mark></label>
+						<select name="type_of_event" id="type_of_event" method="post" required>
 							<option value=" " selected> EMPTY </option>
 							<option value="Movie">Movie</option>
 							<option value="Concert">Concert</option>
@@ -158,13 +202,12 @@ margin:5px;
 					</div>
 
 <br>
-<br>
 <div>
-	<input style="text-align: center;" type="submit" class="submit" title="Submit" method="post" value="Submit">
+	<input style="text-align: center; font-family:'Cabin Sketch',cursive;" type="submit" id="submit" class="submit" title="Submit" method="post" value="Submit">
 </div>
 
 
 
-
+</div>
 </body>
 </html>
