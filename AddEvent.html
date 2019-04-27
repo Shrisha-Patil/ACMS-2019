@@ -161,50 +161,141 @@ header{
           </div>
 
 <br>
-<br>
 
 					<div class="form-control">
-            <label class="header"><mark style="background-color:#1f2833; color:white;">City of the Event:</mark></label>
-            <input type="text" title="City" id="city" name="city" placeholder="City"
+            <label class="header"><mark style="background-color:#1f2833; color:white;">Poster of the Event:</mark></label>
+            <input type="file" title="poster" id="poster" name="poster" placeholder="Enter the .jpg format"
             required method="post">
           </div>
 
 <br>
-<br>
 
 					<div class="form-control">
-						<label class="header"><mark style="background-color:#1f2833; color:white;">Price per Ticket:</mark></label>
-						<input type="text" title="Price Per Ticket" id="price_per_ticket" name="price_per_ticket" placeholder="Price Per Ticket"
+						<label class="header"><mark style="background-color:#1f2833; color:white;">Trailer:</mark></label>
+						<input type="text" title="Trailer" id="trailer" name="trailer" placeholder="Please enter the Youtube link"
 						required method="post">
 					</div>
 
 <br>
-<br>
 					<div class="form-control">
-						<label class="header"><mark style="background-color:#1f2833; color:white;">Venue Address:</mark></label>
-						<input type="text" title="Venue Address" id="venue_address" name="venue_address" placeholder="Venue Address"
-						required method="post">
-					</div>
-
-<br>
-<br>
-
-					<div class="form-control">
-						<label class="header" title="Type of Event"><mark style="background-color:#1f2833; color:white;">Type of Event(*):</mark></label>
-						<select name="type_of_event" id="type_of_event" method="post" required>
-							<option value=" " selected> EMPTY </option>
-							<option value="Movie">Movie</option>
-							<option value="Concert">Concert</option>
-							<option value="Play">Play</option>
-							<option value="Food">Food</option>
-							<option value="Sports">Sports</option>
+						<label class="header"><mark style="background-color:#1f2833; color:white;">Category:</mark></label>
+						<select onchange="categoryCheck()" name="category" id="category" method="post" required>
+							<option id=" " > EMPTY </option>
+							<option id="Movie">Movie</option>
+							<option id="Sports">Sports</option>
+							<option id="Drama">Drama</option>
+							<option id="Stand-up">Stand-up</option>
 						</select>
 					</div>
 
 <br>
-<div>
-	<input style="text-align: center; font-family:'Cabin Sketch',cursive;" type="submit" id="submit" class="submit" title="Submit" method="post" value="Submit">
+
+<script type="text/javascript">
+function categoryCheck(){
+
+
+if (document.getElementById("Movie").selected) {
+				 document.getElementById("moviegenre").style.display = "block";
+				 document.getElementById("sportsgenre").style.display = "none";
+				 document.getElementById("dramagenre").style.display = "none";
+		 }
+		 else if(document.getElementById("Sports").selected){
+				 document.getElementById("sportsgenre").style.display = "block";
+				 document.getElementById("moviegenre").style.display = "none";
+				 document.getElementById("dramagenre").style.display = "none";
+		 }
+		 else if(document.getElementById("Drama").selected){
+			 document.getElementById("dramagenre").style.display="block"
+			 document.getElementById("moviegenre").style.display = "none";
+			 document.getElementById("sportsgenre").style.display = "none";
+		 }
+		 else if(document.getElementById("Stand-up").selected){
+			document.getElementById("dramagenre").style.display="none"
+			document.getElementById("moviegenre").style.display = "none";
+			document.getElementById("sportsgenre").style.display = "none";
+		}
+ }
+</script>
+
+<div class="form-control" id="moviegenre">
+	<label class="header" title="Genre"><mark style="background-color:#1f2833; color:white;">Genre:</mark></label>
+	<select name="genre" method="post" required>
+		<option value=" " selected> EMPTY </option>
+		<option value="Romantic">Romantic</option>
+		<option value="Comedy">Comedy</option>
+		<option value="Action">Action</option>
+		<option value="Sci-fi & thriller">Sci-fi & thriller</option>
+		<option value="Horror">Horror</option>
+		<option value="Animation">Animation</option>
+	</select>
 </div>
+
+<br>
+<div class="form-control" id="sportsgenre">
+	<label class="header" title="Genre"><mark style="background-color:#1f2833; color:white;">Genre:</mark></label>
+	<select name="genre" method="post" required>
+		<option value=" " selected> EMPTY </option>
+		<option value="Football">Football</option>
+		<option value="Cricket">Cricket</option>
+		<option value="Table Tennis">Table Tennis</option>
+		<option value="Hockey">Hockey</option>
+		<option value="Badminton">Badminton</option>
+		<option value="Kabaddi">Kabaddi</option>
+	</select>
+</div>
+<br>
+<div class="form-control" id="dramagenre" >
+	<label class="header" title="Genre"><mark style="background-color:#1f2833; color:white;">Genre:</mark></label>
+	<select name="Genre" method="post" required>
+		<option value=" " selected> EMPTY </option>
+		<option value="Comedy">Comedy</option>
+		<option value="Mime">Mime</option>
+		<option value="Melodrama">Melodrama</option>
+	</select>
+</div>
+
+					<br>
+
+					<div class="form-control">
+						<label class="header"><mark style="background-color:#1f2833; color:white;">Synopsis:</mark></label>
+						<input type="text" title="synopsis" id="synopsis" name="synopsis" placeholder="Enter a brief description of the event"
+						required method="post">
+					</div>
+
+					<br>
+
+					<div class="form-control">
+						<label class="header"><mark style="background-color:#1f2833; color:white;">Duration:</mark></label>
+						<input type="text" title="Duration" id="duration" name="duration" placeholder="How long is your event?"
+						required method="post">
+					</div>
+
+					<br>
+
+					<div class="form-control">
+						<label class="header"><mark style="background-color:#1f2833; color:white;">Date:</mark></label>
+						<input type="text" title="Date" id="date" name="date" placeholder="Date of the event"
+						required method="post">
+					</div>
+
+					<br>
+
+					<div class="form-control">
+						<label class="header"><mark style="background-color:#1f2833; color:white;">Cast:</mark></label>
+						<input type="text" title="Cast" id="cast" name="cast" placeholder="Cast of the event"
+						required method="post">
+					</div>
+
+<br>
+<div>
+	<input style="text-align: center; font-family:'Cabin Sketch',cursive;" type="submit" id="savencont" class="submit" title="Save and Continue" method="post" value="Save and Continue">
+</div>
+
+<script type="text/javascript">
+    document.getElementById("savencont").onclick = function () {
+        location.href = "AddVenue.jsp";
+    };
+</script>
 
 
 
