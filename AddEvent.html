@@ -33,10 +33,10 @@ header{
 	margin:0;
 	padding:0;
 	position: absolute;
- top: 0;
- left: 0;
- right: 0;
- height: 65px;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 height: 65px;
 
 }
 .logo{
@@ -54,7 +54,7 @@ header{
 .font{
   font-family: 'Cabin Sketch', cursive;
 }
-  #submit{
+  #savencont{
     align-self:center;
     background-color: #0b0c10;
     width: 30%;
@@ -77,11 +77,11 @@ header{
     -o-border-radius: 30px;
     -ms-border-radius: 30px;
   }
-  #submit:hover {
+  #savencont:hover {
     background-color:#c5c6c7;
     color:#fff;
   }
-  input#name,input#city,input#price_per_ticket,input#venue_address{
+  input#name,input#poster,input#trailer,input#category,input#genre,input#synopsis,input#duration,input#date,input#cast,input#moviegenre,input#dramagenre,input#sportsgenre{
     padding:0 40px;
     width:20%;
     height:45px;
@@ -126,7 +126,7 @@ header{
 
 </head>
 
-<body style="overflow:hidden;" link="#66fcf1" vlink="white" alink="#0b0c10">
+<body style="overflow:auto;" link="#66fcf1" vlink="white" alink="#0b0c10">
 
 	<header>
 		<div class="headermenu">
@@ -177,84 +177,6 @@ header{
 					</div>
 
 <br>
-					<div class="form-control">
-						<label class="header"><mark style="background-color:#1f2833; color:white;">Category:</mark></label>
-						<select onchange="categoryCheck()" name="category" id="category" method="post" required>
-							<option id=" " > EMPTY </option>
-							<option id="Movie">Movie</option>
-							<option id="Sports">Sports</option>
-							<option id="Drama">Drama</option>
-							<option id="Stand-up">Stand-up</option>
-						</select>
-					</div>
-
-<br>
-
-<script type="text/javascript">
-function categoryCheck(){
-
-
-if (document.getElementById("Movie").selected) {
-				 document.getElementById("moviegenre").style.display = "block";
-				 document.getElementById("sportsgenre").style.display = "none";
-				 document.getElementById("dramagenre").style.display = "none";
-		 }
-		 else if(document.getElementById("Sports").selected){
-				 document.getElementById("sportsgenre").style.display = "block";
-				 document.getElementById("moviegenre").style.display = "none";
-				 document.getElementById("dramagenre").style.display = "none";
-		 }
-		 else if(document.getElementById("Drama").selected){
-			 document.getElementById("dramagenre").style.display="block"
-			 document.getElementById("moviegenre").style.display = "none";
-			 document.getElementById("sportsgenre").style.display = "none";
-		 }
-		 else if(document.getElementById("Stand-up").selected){
-			document.getElementById("dramagenre").style.display="none"
-			document.getElementById("moviegenre").style.display = "none";
-			document.getElementById("sportsgenre").style.display = "none";
-		}
- }
-</script>
-
-<div class="form-control" id="moviegenre">
-	<label class="header" title="Genre"><mark style="background-color:#1f2833; color:white;">Genre:</mark></label>
-	<select name="genre" method="post" required>
-		<option value=" " selected> EMPTY </option>
-		<option value="Romantic">Romantic</option>
-		<option value="Comedy">Comedy</option>
-		<option value="Action">Action</option>
-		<option value="Sci-fi & thriller">Sci-fi & thriller</option>
-		<option value="Horror">Horror</option>
-		<option value="Animation">Animation</option>
-	</select>
-</div>
-
-<br>
-<div class="form-control" id="sportsgenre">
-	<label class="header" title="Genre"><mark style="background-color:#1f2833; color:white;">Genre:</mark></label>
-	<select name="genre" method="post" required>
-		<option value=" " selected> EMPTY </option>
-		<option value="Football">Football</option>
-		<option value="Cricket">Cricket</option>
-		<option value="Table Tennis">Table Tennis</option>
-		<option value="Hockey">Hockey</option>
-		<option value="Badminton">Badminton</option>
-		<option value="Kabaddi">Kabaddi</option>
-	</select>
-</div>
-<br>
-<div class="form-control" id="dramagenre" >
-	<label class="header" title="Genre"><mark style="background-color:#1f2833; color:white;">Genre:</mark></label>
-	<select name="Genre" method="post" required>
-		<option value=" " selected> EMPTY </option>
-		<option value="Comedy">Comedy</option>
-		<option value="Mime">Mime</option>
-		<option value="Melodrama">Melodrama</option>
-	</select>
-</div>
-
-					<br>
 
 					<div class="form-control">
 						<label class="header"><mark style="background-color:#1f2833; color:white;">Synopsis:</mark></label>
@@ -285,6 +207,89 @@ if (document.getElementById("Movie").selected) {
 						<input type="text" title="Cast" id="cast" name="cast" placeholder="Cast of the event"
 						required method="post">
 					</div>
+
+<br>
+<div class="form-control" id="category">
+	<label class="header"><mark style="background-color:#1f2833; color:white;">Category:</mark></label>
+	<select onchange="categoryCheck()" name="category" id="category" method="post" required>
+		<option id="empty" > EMPTY </option>
+		<option id="Movie">Movie</option>
+		<option id="Sports">Sports</option>
+		<option id="Drama">Drama</option>
+		<option id="Stand-up">Stand-up</option>
+	</select>
+</div>
+
+<br>
+
+<script type="text/javascript">
+function categoryCheck(){
+if (document.getElementById("Movie").selected) {
+document.getElementById("moviegenre").style.display = "block";
+document.getElementById("sportsgenre").style.display = "none";
+document.getElementById("dramagenre").style.display = "none";
+}
+else if(document.getElementById("Sports").selected){
+document.getElementById("sportsgenre").style.display = "block";
+document.getElementById("moviegenre").style.display = "none";
+document.getElementById("dramagenre").style.display = "none";
+}
+else if(document.getElementById("Drama").selected){
+document.getElementById("dramagenre").style.display="block"
+document.getElementById("moviegenre").style.display = "none";
+document.getElementById("sportsgenre").style.display = "none";
+}
+else if(document.getElementById("Stand-up").selected){
+document.getElementById("dramagenre").style.display="none"
+document.getElementById("moviegenre").style.display = "none";
+document.getElementById("sportsgenre").style.display = "none";
+}
+else
+{
+document.getElementById("dramagenre").style.display="none"
+document.getElementById("moviegenre").style.display = "none";
+document.getElementById("sportsgenre").style.display = "none";
+}
+}
+
+</script>
+
+<div class="form-control" id="moviegenre">
+<label class="header" title="Genre"><mark style="background-color:#1f2833; color:white;">Genre:</mark></label>
+<select name="genre" method="post" required>
+<option value=" " selected> EMPTY </option>
+<option value="Romantic">Romantic</option>
+<option value="Comedy">Comedy</option>
+<option value="Action">Action</option>
+<option value="Sci-fi & thriller">Sci-fi & thriller</option>
+<option value="Horror">Horror</option>
+<option value="Animation">Animation</option>
+</select>
+</div>
+
+<br>
+<div class="form-control" id="sportsgenre">
+<label class="header" title="Genre"><mark style="background-color:#1f2833; color:white;">Genre:</mark></label>
+<select name="genre" method="post" required>
+<option value=" " selected> EMPTY </option>
+<option value="Football">Football</option>
+<option value="Cricket">Cricket</option>
+<option value="Table Tennis">Table Tennis</option>
+<option value="Hockey">Hockey</option>
+<option value="Badminton">Badminton</option>
+<option value="Kabaddi">Kabaddi</option>
+</select>
+</div>
+<br>
+<div class="form-control" id="dramagenre" >
+<label class="header" title="Genre"><mark style="background-color:#1f2833; color:white;">Genre:</mark></label>
+<select name="Genre" method="post" required>
+<option value=" " selected> EMPTY </option>
+<option value="Comedy">Comedy</option>
+<option value="Mime">Mime</option>
+<option value="Melodrama">Melodrama</option>
+</select>
+</div>
 
 <br>
 <div>
