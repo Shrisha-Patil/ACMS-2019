@@ -18,7 +18,7 @@
     background-color: #45a29e;
     background-size: 25%;
     color:white;
-    scroll-padding: 100px;
+    font-family: 'Cabin Sketch', cursive;
   }
   .popcorn-loader-overlay {
     width: 100%;
@@ -53,9 +53,6 @@
   *{
     margin:0;
     padding:0;
-}
-.font{
-  font-family: 'Cabin Sketch', cursive;
 }
   #login{
     align-self:center;
