@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <style>
+  html{
+    padding:0;
+    margin:0;
+  }
+  body{
+    background-image:url(projector.jpg);
+    background-position: top 80px left 100px;
+    background-color: #45a29e;
+    background-size: 25%;
+    color:white;
+    font-family: 'Cabin Sketch', cursive;
+  }
+  .popcorn-loader-overlay {
+    width: 100%;
+    height: 100%;
+    background: url('popcorn.gif') center no-repeat #FFF;
+    z-index: 99999;
+    position: fixed;
+  }
+  header{
+    width: 100%;
+    background-color: #1f2833;
+    margin:0;
+    padding:0;
+    position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 65px;
+  }
+  .headermenu .logo a{
+    text-decoration:none;
+    color:white;
+  }
+  .logo{
+    margin-left: 15px;
+    position: absolute;
+    vertical-align: middle;
+    font-family: 'Fredericka the Great';
+    font-size: 45px;
+    color:white;
+  }
+  *{
+    margin:0;
+    padding:0;
+}
+</style>
+
+
+  <title> LogOut Page </title>
+  <!--icons & fonts-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+  jQuery(window).load(function(){
+    jQuery(".popcorn-loader-overlay").fadeOut(1000);
+  });
+  </script>
+
+  <noscript>
+    <style>.popcorn-loader-overlay { display: none; } </style> </noscript>
+
+
+  </head>
+
+  <body style="overflow:hidden;" link="#66fcf1" vlink="white" alink="#0b0c10">
+
+    <header>
+      <div class="headermenu">
+        <div class="logo">
+          <a href="index.html">eQarth</a>
+    </header>
+
+    <div class="popcorn-loader-overlay"></div>
+    <h1 ><mark style="background-color:#1f2833; color:white;">Logged Out!</mark></h1>
+<br>
+<br>
+<p><mark style="background-color:#1f2833; color:white;">You have successfully logged out. Click below to Log In to your account again</mark></p>
+
+<p><mark style="background-color:#1f2833; color:white;"><a href="index.html" title="LogIn"> Login Again
+</a></mark></p>

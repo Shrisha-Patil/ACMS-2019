@@ -124,8 +124,19 @@
 <br>
   <br>
     <a href="EventManager.jsp">Manage Your Events (For Event Managers Only)</a>
-
-
+<br>
+  <br>
+    <input type="button" value="logout" id="top-btn-logout" onclick="test()">
+      <script>
+      $.ajax({
+            url: 'Logout.html',
+            type: 'get',
+            data:{action:'logout'},
+            success: function(data){
+            alert(data);
+            }
+        });
+</script>
         </div>
 
     </body>
