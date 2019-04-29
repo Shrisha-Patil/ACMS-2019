@@ -148,24 +148,27 @@
         <br>
    			<thead>
    				<tr>
+            <th><mark style="background-color:#1f2833; color:white;">Event ID</mark></th>
    					<th><mark style="background-color:#1f2833; color:white;">Name</mark></th>
-   					<th><mark style="background-color:#1f2833; color:white;">City</mark></th>
-   					<th><mark style="background-color:#1f2833; color:white;">Price per ticket</mark></th>
-            <th><mark style="background-color:#1f2833; color:white;">Venue address</mark></th>
-            <th><mark style="background-color:#1f2833; color:white;">Type of Event</mark></th>
+   					<th><mark style="background-color:#1f2833; color:white;">Category</mark></th>
+   					<th><mark style="background-color:#1f2833; color:white;">Genre</mark></th>
+            <th><mark style="background-color:#1f2833; color:white;">Duration</mark></th>
+            <th><mark style="background-color:#1f2833; color:white;">Date</mark></th>
+            <th><mark style="background-color:#1f2833; color:white;">Cost</mark></th>
    					<th></th>
    				</tr>
    			</thead>
    			<tbody>
    				<c:forEach items="${events}" var="event">
    					<tr>
+              <td>${event.event_id}</td>
    						<td>${event.name}</td>
-   						<td>${event.city}</td>
-   						<td>${event.price_per_ticket}</td>
-              <td>${event.venue_address}</td>
-              <td>${event.type_of_event}</td>
+   						<td>${event.category}</td>
+   						<td>${event.genre}</td>
+              <td>${event.duration}</td>
+              <td>${event.date}</td>
+              <td>${event.cost}</td>
             	<td>
-
    							<a type="button" class="btn btn-warning"
    								href="DeleteEvent.html?id=${event.id}">Delete</a>
    						</td>
