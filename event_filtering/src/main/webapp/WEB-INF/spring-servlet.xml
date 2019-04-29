@@ -30,11 +30,7 @@
     
 <bean id="dao" class="com.amazon.dao.Eventsdao">    
 <property name="template" ref="jt"></property>    
-</bean>  
-<!-- File upload -->
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
- 	
- 	<mvc:annotation-driven />
+</bean> 
  	
  	<mvc:resources mapping="/resources/**" location="/resources/"
     cache-period="31556926"/>
