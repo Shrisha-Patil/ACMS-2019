@@ -114,14 +114,19 @@
         <br>
         <br>
 
-        <a href="ViewBookingHistory.jsp" id="booking-history">View Your Booking History</a>
+        <a href="ViewBookingHistory.jsp">View Your Booking History</a>
         <br>
         <br>
-        <a href="UpdateProfile.jsp" id="update-profile">Update Your Profile</a>
+        <a href="UpdateProfile.jsp">Update Your Profile</a>
         <br>
         <br>
+       <a href="ResetPassword.html">Reset Your Password</a>
+<br>
+  <br>
+    <a href="EventManager.jsp">Manage Your Events (For Event Managers Only)</a>
 
-        <a href="ResetPassword.html" id="reset-password">Reset Your Password</a>
-      </div>
+
+        </div>
+
     </body>
     </html>
