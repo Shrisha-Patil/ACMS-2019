@@ -22,7 +22,7 @@ public class Evcontroller {
 	    }
 	
 	@RequestMapping(value="/sortcat/{category}")    
-	    public String sortcatg(@PathVariable String category, Model m){    
+	    public String sortcatg(@PathVariable String category, Model m){   //The @PathVariable puts URL data into variable 
 		 List<Events> listc=dao.getEventByCategory(category);    
 	        m.addAttribute("listc",listc);  
 	        return "sortcat";    
