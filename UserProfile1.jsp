@@ -34,14 +34,17 @@
     left: 0;
     right: 0;
     height: 65px;
-
+  }
+  .headermenu .logo a{
+    text-decoration:none;
+    color:white;
   }
   .logo{
     margin-left: 15px;
     position: absolute;
     vertical-align: middle;
     font-family: 'Fredericka the Great';
-    font-size: 2.8em;
+    font-size: 45px;
     color:white;
   }
   *{
