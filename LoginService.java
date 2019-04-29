@@ -16,7 +16,7 @@ public class LoginService
 	
 	public boolean userExists(String email)
 	{
-		String q="select password from amazon1.user where Email='"+email+"';";
+		String q="select password from amazon.user where email='"+email+"';";
 		try
 		{
 			Connection con=db_connection.get_connection();
@@ -40,7 +40,7 @@ public class LoginService
 	
 	public boolean validateUser(String email, String password) 
 	{
-		String q="select password from amazon1.user where Email='"+email+"';";
+		String q="select password from amazon.user where email='"+email+"';";
 		try
 		{
 			Connection con=db_connection.get_connection();
@@ -66,7 +66,7 @@ public class LoginService
 	
 	public void changePassword(String mail, String password)
 	{
-		String q="update amazon1.user set password='"+password+"' where Email='"+mail+"';";
+		String q="update amazon.user set password='"+password+"' where email='"+mail+"';";
 		try
 		{
 			Connection con=db_connection.get_connection();
