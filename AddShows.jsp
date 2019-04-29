@@ -17,8 +17,8 @@
   	background-color: #45a29e;
   	background-size: 25%;
   	color:white;
-  	scroll-padding: 100px;
-  }
+    font-family: 'Cabin Sketch',cursive;
+    }
   .popcorn-loader-overlay {
   	width: 100%;
   	height: 100%;
@@ -30,7 +30,6 @@
   	width: 100%;
   	background-color: #1f2833;
   	 height: 65px;
-
   }
   .headermenu .logo a{
     text-decoration:none;
@@ -47,9 +46,6 @@
   *{
   	margin:0;
   	padding:0;
-  }
-  .font{
-    font-family: 'Cabin Sketch', cursive;
   }
     #submit{
       align-self:center;
@@ -152,7 +148,7 @@
 
 <br>
   <div class="form-control">
-    <label class="header"><mark style="background-color:#1f2833; color:white;">Cost of each ticket:</mark></label>
+    <label class="header"><mark style="background-color:#1f2833; color:white;">Cost:</mark></label>
     <input type="text" title="cost" id="cost" name="cost" placeholder="Cost per ticket"
      method="post">
   </div>
