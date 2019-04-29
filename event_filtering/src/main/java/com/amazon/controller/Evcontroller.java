@@ -12,7 +12,7 @@ import com.amazon.model.Events;
 @Controller 
 public class Evcontroller {
 	@Autowired    
-    Eventsdao dao;
+    Eventsdao dao;//will inject dao from XML file
 	
 	@RequestMapping("/showpage")
 	 public String showpage(Model m){    
