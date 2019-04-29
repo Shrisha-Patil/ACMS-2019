@@ -17,7 +17,7 @@
       background-color: #45a29e;
       background-size: 25%;
       color:white;
-      scroll-padding: 100px;
+      font-family: 'Cabin Sketch',cursive;
     }
     .popcorn-loader-overlay {
       width: 100%;
@@ -53,36 +53,6 @@
       margin:0;
       padding:0;
     }
-    .font{
-      font-family: 'Cabin Sketch', cursive;
-    }
-      #login{
-        align-self:center;
-        background-color: #0b0c10;
-        width: 40%;
-        margin:20px;
-        height: 55px;
-        border: none;
-        cursor: pointer;
-        color: #fff;
-        outline: none;
-        font-size: 20px;
-        font-weight: normal;
-        text-transform: uppercase;
-        transition: all 0.5s ease-in-out;
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        border-radius: 30px;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        -o-border-radius: 30px;
-        -ms-border-radius: 30px;
-      }
-      #login:hover {
-        background-color:#c5c6c7;
-        color:#fff;
-      }
     table.center{
       margin-left:auto;
       margin-right:auto;
