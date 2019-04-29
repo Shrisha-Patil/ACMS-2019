@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
- 
+ <!-- Provide support for component scanning -->  
   <context:component-scan base-package="com.amazon.controller"></context:component-scan>    
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
         <property name="prefix" value="/WEB-INF/jsp/" />
@@ -32,10 +32,8 @@
 	<bean id="showdao" class="com.amazon.dao.Showdao"> 
 		<property name="template" ref="jdbcTemplate"></property>  
 	</bean>
-	
-	<!-- File upload -->
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
  	
+	<!--Provide support for conversion, formatting and validation -->  
  	<mvc:annotation-driven />
  	
  	<mvc:resources mapping="/resources/**" location="/resources/"
