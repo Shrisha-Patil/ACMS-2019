@@ -17,7 +17,7 @@
     background-color: #45a29e;
     background-size: 25%;
     color:white;
-    scroll-padding: 100px;
+    font-family: 'Cabin Sketch', cursive;
   }
   .popcorn-loader-overlay {
     width: 100%;
@@ -53,13 +53,10 @@
     margin:0;
     padding:0;
   }
-  .font{
-    font-family: 'Cabin Sketch', cursive;
-  }
-    #change{
+    #change1{
       align-self:center;
       background-color: #0b0c10;
-      width: 30%;
+      width: 40%;
       margin:20px;
       height: 55px;
       border: none;
@@ -79,11 +76,11 @@
       -o-border-radius: 30px;
       -ms-border-radius: 30px;
     }
-    #change:hover {
+    #change1:hover {
       background-color:#c5c6c7;
       color:#fff;
     }
-    input#username,input#pw{
+    input#name,input#phone_number,input#city,input#image{
       padding:0 40px;
       width:20%;
       height:45px;
@@ -153,7 +150,7 @@
 <br>
 
     <div class="form-control">
-      <label class="header"><mark style="background-color:#1f2833; color:white;">Phone Number:</mark></label>
+      <label class="header"><mark style="background-color:#1f2833; color:white;">Ph. No.:</mark></label>
       <input type="tel" title="Phone Number" id="phone_number" name="phone_number"
       value="${phone_no}" method="post" title="Phone Number" >
     </div>
@@ -194,10 +191,14 @@
 
 <br>
 
-
-  <a href="UserProfile1.jsp"><mark style="background-color:#1f2833; color:white;">Save Your Changes and Go Back to Your Profile</mark></a>
-
-
+<div style="text-align: center;">
+  <input method="post" style="font-family: 'Cabin Sketch',cursive;" type="submit" id="change1" value="Save Your Changes and Go Back to Your Profile" >
+  <!--<script type="text/javascript">
+    document.getElementById("change1").onclick = function () {
+      location.href = "UserProfile1.jsp";
+    };
+  </script>-->
+</div>
 </form>
 
 </div>
