@@ -1,7 +1,7 @@
 *{
   padding: 0;
   margin: 0;
-  background-size: cover;
+
 }
 
 .logo{
@@ -10,7 +10,9 @@
   font-size: 2.8em;
 }
 header{
-  width: 1300px;
+  width: 100%;
+  margin:0;
+  padding:0;
   height:4.5em;
   color: white;
   background-color: black;
@@ -21,8 +23,9 @@ body{
   padding: 0;
   background-size: cover;
   height:auto;
-  width:89%;
+  max-width:89%;
   padding-left: 40px;
+  overflow-x:hidden;
 
   }
 .icon{

@@ -21,14 +21,17 @@
   <!--slider files-->
   <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/resources/css/slick.css"/>
   <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/resources/css/slick.css""/>
-
-  <!--ddata-->
-  <script src="script/jquery-1.8.1.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="<%=baseUrl%>/resources/css/search.css""/>
 
 
   <style>
   body{
-    height: 1000px;
+    margin: 0;
+    padding: 0;
+    height:auto;
+    background-color: #45A29E;
+    background-size:cover;
+    font-family: 'Cabin Sketch', cursive;
   }
    /*header*/
     header{
@@ -36,77 +39,46 @@
       height:4.5em;
       color: white;
       background-color: black;
-
+    }
+    .headermenu .logo a{
+        text-decoration: none;
+        color: white;
     }
     .icon{
-     float: right;
-     right: 20px;
+     float: right
     }
     .logo{
-
       font-family: 'Fredericka the Great', cursive;
       font-size: 2.8em;
     }
-    a{
-      text-decoration: none; /*not working check why*/
+    .mov h1 a{
+      text-decoration: none;
+      color: white;
     }
-
-  /*search*/
-  #result {
-   position: absolute;
-   width: 460px;
-   max-width:500px;
-   cursor: pointer;
-   overflow-y: auto;
-   height: 200px;
-   max-height: 450px;
-   box-sizing: border-box;
-   z-index: 1001;
-   overflow: overlay;
-  }
-  .container{
-    float:right 10px;
-  }
-  .link-class:hover{
-   background-color:#f1f1f1;
-  }
-  /*whtasnew*/
-  .bar{
-    height:350px;
-    width: 100%;
-  /*ul li style is applying here*/
-  }
-  /*category*/
-
-  ul li a{
-    text-decoration: none;
-    color: black;
-    display: block;
-  }
-    ul li a:hover{
-      background-color: #A5D6A7;
+    .sports h1 a{
+      text-decoration: none;
+      color: white;
     }
-    ul li ul li{
-      display: none;
+    .drama h1 a{
+      text-decoration: none;
+      color: white;
     }
-    ul li:hover ul li{
-      display: block;
-    }
+    .standup h1 a{
+      text-decoration: none;
+      color: white;
+  
   </style>
  </head>
 
  <body>
 
-<script type="text/javascript">
-   var id = window.location.search;
-    var querypara = id.split("/")[1];
-</script>
+
 
 
    <header>
      <div class="headermenu">
        <div class="logo">
-         <a href="index.jsp">eQarth</a>
+         <a href="/">eQarth</a>
          <div class="icon">
              <i class="fa fa-user" aria-hidden="true" style="font-size:36px;"> <a href="#"></a> </i>
          </div>
@@ -117,51 +89,15 @@
 
 
 
-  <div class="container" style="width:400px;float:right;">
-   <br /><br />
-
-   <div align="right">
-    <input type="text" name="search" id="search" placeholder="Search here" class="form-control" />
-   </div>
-
-   <ul class="list-group" id="result"></ul>
-   <br />
-  </div>
-  <!--  <script>
-  $(document).ready(function(){
-   $.ajaxSetup({ cache: false });
-   $('#search').keyup(function(){
-    $('#result').html('');
-    $('#state').val('');
-    var searchField = $('#search').val();
-    var expression = new RegExp(searchField, "i");
-    $.getJSON('data.json', function(data) {
-     $.each(data, function(key, value){
-      if (value.name.search(expression) != -1 || value.location.search(expression) != -1 || value.category.search(expression) != -1)
-      {
-       $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.name+' | <span class="text-muted">'+value.location+'</span> | <span class="text-muted">'+value.category+'</span></li>');
-      }
-     });
-    });
-   });
-
-   $('#result').on('click', 'li', function() {
-    var click_text = $(this).text().split('|');
-    window.location='movie.html?'+($.trim(click_text[0]));
-    $("#result").html('');
-   });
-  });
-  </script>
-  -->
-
-
+ 
+ 
 
 
   <br><br><br><br>
        <h1>Upcoming</h1>
        <div class="bar">
          <c:forEach var="city" items="${listci}">
-         <div><img src="<%=baseUrl%>/resources/Images/${city.poster}" width="250px" height="290px"/>  <a href="#"></a> </div>
+         <div><img src="<%=baseUrl%>/resources/Images/${city.poster}" style="position:relative;left:40px;" width="650px" height="290px" />  <a href="#"></a> </div>
          </c:forEach>
        </div>
        <br><br>
@@ -176,8 +112,8 @@
        $('.bar').slick({
        arrows: false,
        autoplay: true,
-       autoplaySpeed: 800,
-       dots: true
+       autoplaySpeed: 1200,
+       slidesToShow:2
        });
        });
        </script>
@@ -194,16 +130,29 @@
       <option value="animation" id="animation" onclick='javascript:nextPage(this.id);'>Animation</option>
       <option value="" id=""></option>
     </select>
+    <br>
     <div class="slidemov">
-      <div><img src="" width="165px" height="130px"/>  <a href="#"></a> </div>
+       <c:forEach var="mov" items="${listm}">
+         <div><a href="inevent/${mov.event_id}"><img src="<%=baseUrl%>/resources/Images/${mov.poster}" width="165px" height="130px"/></a> </div>
+         </c:forEach>
       
     </div>
 </div>
+<script type="text/javascript">
+     $('.slidemov').slick({
+     slidesToShow: 6,
+     slidesToScroll: 2,
+     arrows: false,
+     autoplay: true,
+     autoplaySpeed: 1200,
+    });
+    </script>
+
 
 <div class="sports" id="sports">
   <h1><a onclick='javascript:nextPage(this.id);'>Sports</a></h1>
   <select class="sportlist" name="sportlist" id="sportcat">
-    <option value="football" id="football" onclick='javascript:nextPage(this.id);'>/Football</option>
+    <option value="football" id="football" onclick='javascript:nextPage(this.id);'>Football</option>
     <option value="cricket" id="cricket" onclick='javascript:nextPage(this.id);'>Cricket</option>
     <option value="tt" id="tt" onclick='javascript:nextPage(this.id);'>Table tennis</option>
     <option value="hockey" id="hockey" onclick='javascript:nextPage(this.id);'>Hockey</option>
@@ -212,65 +161,61 @@
 
   </select>
   <div class="slidemov">
-    <div><img src="" width="165px" height="130px"/>  <a href="#"></a> </div>
+    <c:forEach var="sprt" items="${lists}">
+         <div><img src="<%=baseUrl%>/resources/Images/${sprt.poster}" width="165px" height="130px"/>  <a href="#"></a> </div>
+         </c:forEach>
 
 </div>
 
-
-<div class="food" id="food">
-  <h1><a onclick='javascript:nextPage(this.id);'>Food</a></h1>
-  <select class="foodlist" name="foodlist" id="foodcat">
-    <option value="chinese" id="chinese" onclick='javascript:nextPage(this.id);'>/Chinese</option>
-    <option value="nindian" id="nindian" onclick='javascript:nextPage(this.id);'>North Indian</option>
-    <option value="sindian" id="sindian" onclick='javascript:nextPage(this.id);'>South Indian</option>
-    <option value="chaats" id="chaats" onclick='javascript:nextPage(this.id);'>Chaats</option>
-
-  </select>
-  <div class="slidemov">
-    <div><img src="" width="165px" height="130px"/>  <a href="#"></a> </div>
-
-</div>
+<script type="text/javascript">
+     $('.slidemov').slick({
+     slidesToShow: 3,
+     slidesToScroll: 2,
+     autoplay: true,
+     autoplaySpeed: 1200,
+    });
+    </script>
 
 <div class="drama" id="drama">
   <h1><a onclick='javascript:nextPage(this.id);'>Drama</a></h1>
   <select class="dramalist" name="dramalist" id="dramacat">
-     <option value="comedy" id="comedy" onclick='javascript:nextPage(this.id);'>/Comedy</option>
+     <option value="comedy" id="comedy" onclick='javascript:nextPage(this.id);'>Comedy</option>
      <option value="mime" id="mime" onclick='javascript:nextPage(this.id);'>Mime</option>
      <option value="melo" id="melo" onclick='javascript:nextPage(this.id);'>Melo drama</option>
     </select>
   <div class="slidemov">
-    <div><img src="" width="165px" height="130px"/>  <a href="#"></a> </div>
+    <div class="slidemov">
+    <c:forEach var="dr" items="${listd}">
+         <div><img src="<%=baseUrl%>/resources/Images/${dr.poster}" width="165px" height="130px"/>  <a href="#"></a> </div>
+         </c:forEach>
 
   </div>
 </div>
 
-<div class="concert" id="concert">
-  <h1><a onclick='javascript:nextPage(this.id);'>Concert</a></h1>
-  <select class="conlist" name="conlist" id="concat">
-     <option value="rock" id="rock" onclick='javascript:nextPage(this.id);'>Rock</option>
-     <option value="pop" id="pop" onclick='javascript:nextPage(this.id);'>Pop</option>
-     <option value="classical" id="classical" onclick='javascript:nextPage(this.id);'> Classical</option>
-    </select>
-  <div class="slidemov">
-    <div><img src="" width="165px" height="130px"/>  <a href="#"></a> </div>
-
-  </div>
-</div>
+<script type="text/javascript">
+     $('.slidemov').slick({
+     slidesToShow: 3,
+     slidesToScroll: 2,
+     autoplay: true,
+     autoplaySpeed: 1200,
+    });
+    </script>
 
 <div class="standup" id="standup">
   <h1><a onclick='javascript:nextPage(this.id);'>Stand-up</a></h1>
 
   <div class="slidemov">
-    <div><img src="" width="165px" height="130px"/>  <a href="#"></a> </div>
+    <c:forEach var="st" items="${listst}">
+         <div><img src="<%=baseUrl%>/resources/Images/${st.poster}" width="165px" height="130px"/>  <a href="#"></a> </div>
+         
+         </c:forEach>
 
   </div>
 </div>
 
- <!--all categories-->
-
-     <script type="text/javascript">
+<script type="text/javascript">
      $('.slidemov').slick({
-     slidesToShow: 6,
+     slidesToShow: 3,
      slidesToScroll: 2,
      autoplay: true,
      autoplaySpeed: 1200,
@@ -281,7 +226,7 @@
     <!--next page-->
     <script type="text/javascript">
      function nextPage(id){
-       window.location="listall.html?"+id;
+       window.location="listall.html/"+id;
       }
 
     </script>
