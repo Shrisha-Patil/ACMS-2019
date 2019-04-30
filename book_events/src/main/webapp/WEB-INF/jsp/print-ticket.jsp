@@ -56,7 +56,7 @@ img {
 	<div class="row">
 		<div class="col-sm-4"></div>
 		<div class="jumbotron col-sm-6">
-			<img alt="ticket" src="<%=baseUrl%>/resources/Images/ticket.ico">
+		<img alt="ticket" src="<%=baseUrl%>/resources/Images/ticket.ico">
 			<span class="mticket">E-Ticket</span><br>
 			Event:
 			<%=b.getEvent().getName()%><br> Date:

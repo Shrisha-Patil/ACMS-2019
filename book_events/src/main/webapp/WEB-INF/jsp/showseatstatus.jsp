@@ -41,13 +41,14 @@
 							//out.print("<input type='checkbox' checked='checked' disabled='disabled' > ");
 						}
 					}
-					
 					if (i < 2 || i == 7){
 						jmax = 8; out.print("<span style='padding-left:32px'></span>");
 					}
 					out.print("<br/>");
 					
 				}
+				String showid=s.getShow_id();
+				session.setAttribute("showid",showid);
 				out.print("<hr>");
 				out.print("<input type='hidden' name='show_id' value='" + s.getShow_id() + "'>");
 				out.print("<input type='submit' value='Book Seats'>");

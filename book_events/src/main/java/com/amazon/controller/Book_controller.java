@@ -1,3 +1,4 @@
+package com.amazon.controller;
 import java.util.Iterator;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -38,7 +39,7 @@ public class Book_controller {
 	}
 	
 	@RequestMapping("/showtimes/choose-slot/{show_id}/showseatstatus")
-	public ModelAndView showSeatstatus(@PathVariable String show_id,HttpSession session) {
+	public String showSeatstatus(@PathVariable String show_id,HttpSession session,ModelMap m,HttpServletRequest request) {
 		System.out.println(show_id);
 		String str3=show_id;
 		List<Show> shows = showdao.getShowByShowid(show_id);
@@ -49,7 +50,8 @@ public class Book_controller {
 		}
 		System.out.println(s.getSeat_status());
 		session.setAttribute("str3", str3);
-		return new ModelAndView("showseatstatus", "s", s);
+		m.addAttribute("s", s);
+		return "showseatstatus";
 	}
 	
 	@RequestMapping(value="/showtimes/choose-slot/{venue_id}/{event_id}")    
@@ -64,8 +66,7 @@ public class Book_controller {
     }
 	
 	@RequestMapping("/payment")
-	public ModelAndView bookSeats(HttpServletRequest request,HttpSession session) {
-
+	public String bookSeats(HttpServletRequest request,HttpSession session,ModelMap m) {
 		String[] seats = request.getParameterValues("seat");
 		int count=0;
 		for(int i=0;i<seats.length;i++) {
@@ -82,7 +83,8 @@ public class Book_controller {
 		booking.setSeats(seats);
 		booking.setShow(show);
 		booking.setEvent(ev);
-		return new ModelAndView("payment-page", "booking", booking);
+		m.addAttribute("booking", booking);
+		return "payment-page";
 	}
 	
 	@RequestMapping("/print/{total_cost}")

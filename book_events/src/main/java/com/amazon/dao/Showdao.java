@@ -33,7 +33,7 @@ public class Showdao {
 	}
 	public boolean updatebooking(int bo,String str1,String str2,String str3,double c,int count) {
 		boolean x=false;
-		String sql="insert into booking values("+bo+",'"+"mani@gmail.com"+"','"+str1+"','"+str3+"',"+count+","+c+",'"+str2+"')";
+		String sql="insert into booking values("+bo+",'"+"manikyaaravind@gmail.com"+"','"+str1+"','"+str3+"',"+count+","+c+",'"+str2+"')";
 		if(template.update(sql)>0) return true;
 		return x;
 	}	
